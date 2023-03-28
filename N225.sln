@@ -13,6 +13,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N225.Infrastrucure", "N225.
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{518536D7-CCA6-472A-AE70-4540B42F4A42}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "html", "html\", "{4E24F3F5-2709-42A7-9F8D-F409E5CD2414}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50510"
+		Debug.AspNetCompiler.PhysicalPath = "html\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50510\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50510"
+		Release.AspNetCompiler.PhysicalPath = "html\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50510\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50510"
+		SlnRelativePath = "html\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +58,10 @@ Global
 		{28E63323-7B36-4709-8CBA-D5888CBF62E7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{518536D7-CCA6-472A-AE70-4540B42F4A42}.Debug|Any CPU.ActiveCfg = Debug
 		{518536D7-CCA6-472A-AE70-4540B42F4A42}.Release|Any CPU.ActiveCfg = Release
+		{4E24F3F5-2709-42A7-9F8D-F409E5CD2414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E24F3F5-2709-42A7-9F8D-F409E5CD2414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E24F3F5-2709-42A7-9F8D-F409E5CD2414}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E24F3F5-2709-42A7-9F8D-F409E5CD2414}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

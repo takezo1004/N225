@@ -3,6 +3,7 @@ using N225.Domain.Entities;
 using N225.Domain.Exceptions;
 using N225.Domain.Modules.Utils;
 using N225.Infrastrucure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,6 +13,7 @@ namespace N225.WinForm.Modules
     {
         /// <summary>
         /// 自動取引データ保存ディクショナリー
+        /// key はExecutionID
         /// </summary>
         public static Dictionary<string, PositionCsvItem> AutoList =
                                     new Dictionary<string, PositionCsvItem>();
@@ -99,5 +101,18 @@ namespace N225.WinForm.Modules
             }
  
         }
+
+        /// <summary>
+        /// ExecutionIdが有るか検索する
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>bool</returns>
+        internal static bool IsExecutionId(string id)
+        {
+
+            PositionCsvItem tpl;
+
+            return (AutoList.TryGetValue(id, out tpl));
+         }  
     }
 }

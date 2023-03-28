@@ -1,0 +1,7 @@
+<map id="N225.WinForm.StrategyViews.StrategyForm.AddNewButton_Click" name="N225.WinForm.StrategyViews.StrategyForm.AddNewButton_Click">
+<area shape="rect" id="node1" title=" " alt="" coords="5,69,232,109"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_strategys_1_1_strategy_model.html#a10c7e4125746b858661d8e0c1d0f7691" title="StrategyDataGridに１行表示" alt="" coords="280,69,503,109"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_strategy_list_cash.html#a3755f2734284b31fa65c78d10095cd5f" title="追加" alt="" coords="575,5,749,45"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_strategy_list_cash.html#afb7b073ac23726db265704339bc6e506" title="要素削除" alt="" coords="575,69,749,109"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_win_form_1_1_strategys_1_1_strategy_model.html#acb7b5e63b0d9dbe4e0ca46c700e35d33" title="Input data check" alt="" coords="551,133,773,173"/>
+</map>

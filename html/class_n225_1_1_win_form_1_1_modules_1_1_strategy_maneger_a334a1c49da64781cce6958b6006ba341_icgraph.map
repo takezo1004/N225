@@ -1,0 +1,6 @@
+<map id="N225.WinForm.Modules.StrategyManeger.AddList" name="N225.WinForm.Modules.StrategyManeger.AddList">
+<area shape="rect" id="node1" title="formにStrategyを表示する" alt="" coords="507,41,721,81"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#a5b8c4db4b82dc39005d05117c35dd3cd" title="アプリケーションの初期化" alt="" coords="239,5,457,45"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#ae3ff3e24ddacdc85f3a62c2b0d101b30" title="初期設定画面表示する" alt="" coords="237,70,459,125"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#a6c534b18de8d8b1bc8e5e86d5d50b5a6" title="コンストラクタ" alt="" coords="5,5,189,45"/>
+</map>

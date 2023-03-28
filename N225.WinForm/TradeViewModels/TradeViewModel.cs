@@ -20,6 +20,8 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Security;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Threading;
 using Side = N225.Domain.CommonConst.Side;
 
@@ -27,6 +29,11 @@ namespace N225.WinForm.TradeViewModels
 {
     public class TradeViewModel : ViewModelBase
     {
+        //接続先ホスト名
+        //string host = "192.168.0.100";
+        private string host = "localhost";
+        //接続先ポート
+        private int port = 8000;
 
         TcpClient tClient = new TcpClient();
         WebSocket_Future client = new WebSocket_Future();
@@ -37,14 +44,19 @@ namespace N225.WinForm.TradeViewModels
         /// </summary>
         public TradeViewModel()
         {
-            tClient.OnConnected += new TcpClient.ConnectedEventHndler(TcpClient_OnConnected);
-            tClient.OnDisconnected += new TcpClient.DisconnectedEventHndler(TcpClient_OnDiscconnected);
-            tClient.OnReciveData += new TcpClient.ReceiveEventHndler(TcpClient_OnReciveData);
+             
+            tClient.Connected += TcpClient_OnConnected;
+            tClient.Disconnected += TcpClient_OnDiscconnected;
+            tClient.DataReceived += TcpClient_OnReciveData;
+            //tClient.Disconnected += new TcpClient.DisconnectedEventHndler(TcpClient_OnDiscconnected);
+            //tClient.DataReceived += new TcpClient.ReceiveEventHndler(TcpClient_OnReciveData);
+
             client.MessageEventHandler += this.Client_OnReciveData;
             client.CnnectedEventHndler += Client_CnnectedEventHndler;
             client.DisconnectedEventHndler += Client_DisconnectedEventHndler;
         }
 
+        
         public SendOrderEntity _entity;
 
         private string _symbl = string.Empty;
@@ -227,12 +239,12 @@ namespace N225.WinForm.TradeViewModels
             DirectoryUtils.SafeCreateDirectory();
             SettingPassword();
             XAPIkey = KabuSuiteApiToken.Token(Shared.APIPassword, Shared.Port);
-            if(string.IsNullOrEmpty( XAPIkey))
+            if (string.IsNullOrEmpty(XAPIkey))
             {
                 WriteMessage(" 認証エラー KabuStationに接続出来ませんでした。");
                 error = false;
             }
-            else 
+            else
             {
                 Shared.XAPIkey = XAPIkey;
                 SymbolRequest symbol = new SymbolRequest(XAPIkey);
@@ -247,21 +259,29 @@ namespace N225.WinForm.TradeViewModels
                 Positions();
                 WebClient();
                 InquiryOrder();
+                TcpClientStart();
             }
-            TcpClientConnect();
+            Thread.Sleep(1000);
             StrategyManeger.CsvRead();
             StrategyManeger.AddList(this.StrategyViews);
+            
             if (TcpConnected == false)
             {
                 WriteMessage(" TradingView webHookに接続出来ませんでした。");
+                error = false;   
             }
+            /*
             else
             {
                 WriteMessage("TradingView Webhook 接続 ");
-            }
+            }*/
             if(error == false)
             {
                 WriteMessage("正常に初期化されませんでした。");
+                if (TcpConnected == false)
+                {
+                    WriteMessage("Webhookサーバーは起動していません。");
+                }
                 return;
             }
             WriteMessage("正常に初期化され起動しました。");
@@ -277,17 +297,13 @@ namespace N225.WinForm.TradeViewModels
         }
 
         /// <summary>
-        /// TcpClient　起動
+        /// TcpClient　実行スタート
         /// </summary>
-        private void TcpClientConnect()
+        private async void TcpClientStart()
         {
-            //接続先ホスト名
-            //string host = "192.168.0.100";
-            string host = "localhost";
-            //接続先ポート
-            int port = 8000;
-            //接続処理
-            tClient.Connect(host, port);
+
+            //非同期でTcpClientを実行する
+            await Task.Run(() =>  tClient.StartClient(host, port));
         }
 
         /// <summary>
@@ -425,25 +441,27 @@ namespace N225.WinForm.TradeViewModels
         /// <param name="dataFiled"></param>
         public void SendOrder(InputOrder dataFiled)
         {
-            SendOrderEntity entity = CreateSendOrderNew.SendOrderNewInputCheck(dataFiled);
+            
+                SendOrderEntity entity = CreateSendOrderNew.SendOrderNewInputCheck(dataFiled);
 
-            var order = OrderFactory.Create(dataFiled.SelectedOrder);
-            entity = order.CreateOrderFiled(entity);
+                var order = OrderFactory.Create(dataFiled.SelectedOrder);
+                entity = order.CreateOrderFiled(entity);
 
-            OrderListEntity _orderEntiry = SendOrderFuture.SendOrder(entity);
-            WriteMessage(
-                        "発注しました：　" +
-                        _orderEntiry.TradeMode.DisplayValue + " " +
-                        _orderEntiry.Strategy + " " +
-                        Convert.ToString(_orderEntiry.Interval) + " " +
-                        _orderEntiry.CashMargin.DisplayValue + " " +
-                        _orderEntiry.Side.DisplayValue + " " +
-                        Convert.ToString(_orderEntiry.Price) + " " +
-                        Convert.ToString(_orderEntiry.OrderQty) + "枚 " + " " +
-                        _orderEntiry.ExecutionID);
-            //戻り値　viewEntityをリストに追加しデータバインドする
-            OrderManager.Initial(_orderEntiry);
-            PositionManager.Initial(_orderEntiry);
+                OrderListEntity _orderEntiry = SendOrderFuture.SendOrder(entity);
+                WriteMessage(
+                            "発注しました：　" +
+                            _orderEntiry.TradeMode.DisplayValue + " " +
+                            _orderEntiry.Strategy + " " +
+                            Convert.ToString(_orderEntiry.Interval) + " " +
+                            _orderEntiry.CashMargin.DisplayValue + " " +
+                            _orderEntiry.Side.DisplayValue + " " +
+                            Convert.ToString(_orderEntiry.Price) + " " +
+                            Convert.ToString(_orderEntiry.OrderQty) + "枚 " + " " +
+                            _orderEntiry.ExecutionID);
+                //戻り値　viewEntityをリストに追加しデータバインドする
+                OrderManager.Initial(_orderEntiry);
+                PositionManager.Initial(_orderEntiry);
+            
         }
 
         /// <summary>
@@ -465,17 +483,17 @@ namespace N225.WinForm.TradeViewModels
         private void TcpClient_OnDiscconnected(object sender, EventArgs e)
         {
             TcpConnected = false;
-            WriteMessage("TradingView TcpClient Disconected");
+            WriteMessage("Webhook サーバーは切断しました");
         }
 
         /// <summary>
         /// TcpClient Connect Event
         /// </summary>
         /// <param name="e"></param>
-        private void TcpClient_OnConnected(EventArgs e)
+        private void TcpClient_OnConnected(object sender,EventArgs e)
         {
             TcpConnected = true;
-            WriteMessage("TradingViewTcpClient Conected"); //Tcpclientはerrorになる
+            WriteMessage("Webhook サーバーに接続しました"); //Tcpclientはerrorになる
         }
 
         /// <summary>
@@ -651,10 +669,15 @@ namespace N225.WinForm.TradeViewModels
                                 new CashMargin(fileld.TradeType + 1).DisplayValue + " " +
                                     new Domain.ValueObjects.Side(fileld.Side).DisplayValue + " " + Convert.ToString(fileld.Price);
             WriteMessage(ms);
+            
 
             //form Strategy gridviewにトレードサインを表示する
-            StrategyManeger.UpDate(StrategyViews,fileld);
- 
+            bool found = StrategyManeger.UpDate(StrategyViews,fileld);
+            if (found == false)
+            {
+                WriteMessage("Strategy Listには登録されていません。");
+            }
+             
             if (AutoButoon == false)
             {
                 return;
@@ -679,14 +702,20 @@ namespace N225.WinForm.TradeViewModels
                 }
                 foreach (string id in listid)
                 {
+                    
                     fileld.ExecutionId = id;
+                    
                     SendOrder(fileld);
+                  
                 }
             }
             else
             {
+                
                 SendOrder(fileld);
+                 
             }
+           
         }
 
 

@@ -1,0 +1,5 @@
+<map id="N225.WinForm.Modules.OrderManager.Add" name="N225.WinForm.Modules.OrderManager.Add">
+<area shape="rect" id="node1" title="OrderDataGrid,OrdersCache、OrderInquiryListに一行追加する" alt="" coords="5,37,204,77"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html#ab75954841cc45f924c03e07a59551649" title="追加" alt="" coords="252,5,427,45"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_orders_cache.html#a81a1a1f101cc9f6da0fa929759b66f8d" title="ディクショナリー　追加" alt="" coords="252,69,427,109"/>
+</map>

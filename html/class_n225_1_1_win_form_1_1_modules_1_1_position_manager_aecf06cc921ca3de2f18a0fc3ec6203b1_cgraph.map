@@ -1,0 +1,6 @@
+<map id="N225.WinForm.Modules.PositionManager.Revocation" name="N225.WinForm.Modules.PositionManager.Revocation">
+<area shape="rect" id="node1" title="注文失効" alt="" coords="5,37,219,77"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_modules_1_1_position_manager.html#a4f7aea345a5c79e3ed02c1b0dfee51e2" title="期限切れ" alt="" coords="267,37,480,77"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_win_form_1_1_modules_1_1_position_manager.html#a3ae79617837eb8282e24fc94473e42b4" title="executionIDに該当するPositionDataGridインデックス番号" alt="" coords="528,5,741,45"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a9ecdb54e6a805d0d8490a5217e32762c" title="更新" alt="" coords="547,69,722,109"/>
+</map>

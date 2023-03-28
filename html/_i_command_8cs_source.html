@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N225Project: C:/Users/takao2/N225(C#)/src/N225/N225.Domain/Repositories/ICommand.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">N225Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9dfeeea711b64c78137f56323d7c17f7.html">N225</a></li><li class="navelem"><a class="el" href="dir_11fc7df218b23d68e0ea8183b5718885.html">N225.Domain</a></li><li class="navelem"><a class="el" href="dir_d28fee5baec603fc31d1d7ed1f7d7dfa.html">Repositories</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ICommand.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_command_8cs.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_repositories.html">N225.Domain.Repositories</a></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html">    3</a></span>    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html">ICommand</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a1e37d06b3555b3c0e36926bea17783c2">    5</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a1e37d06b3555b3c0e36926bea17783c2">Initial&lt;T&gt;</a>(T entity);</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a2572d903493fca263a905eb509036626">    6</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a2572d903493fca263a905eb509036626">Xepired</a>(<span class="keywordtype">string</span> orderId);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#af15cc40499178a56fb7cb7a218122bb9">    7</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#af15cc40499178a56fb7cb7a218122bb9">Oreder</a>(<span class="keywordtype">string</span> orderId);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a46d5ebaa227c5588912833634c5b167f">    8</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a46d5ebaa227c5588912833634c5b167f">Correction</a>(<span class="keywordtype">string</span> orderId);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a2afd07b9d9d5acb772290f79fc1708cb">    9</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a2afd07b9d9d5acb772290f79fc1708cb">Revocation</a>(<span class="keywordtype">string</span> orderId);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a771f5935acba5c965aa1eaab80bea0f9">   10</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a771f5935acba5c965aa1eaab80bea0f9">Contrct</a>(<span class="keywordtype">string</span> orderId);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+<div class="ttc" id="ainterface_n225_1_1_domain_1_1_repositories_1_1_i_command_html"><div class="ttname"><a href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html">N225.Domain.Repositories.ICommand</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_command_8cs_source.html#l00003">ICommand.cs:4</a></div></div>
+<div class="ttc" id="ainterface_n225_1_1_domain_1_1_repositories_1_1_i_command_html_a1e37d06b3555b3c0e36926bea17783c2"><div class="ttname"><a href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a1e37d06b3555b3c0e36926bea17783c2">N225.Domain.Repositories.ICommand.Initial&lt; T &gt;</a></div><div class="ttdeci">void Initial&lt; T &gt;(T entity)</div></div>
+<div class="ttc" id="ainterface_n225_1_1_domain_1_1_repositories_1_1_i_command_html_a2572d903493fca263a905eb509036626"><div class="ttname"><a href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a2572d903493fca263a905eb509036626">N225.Domain.Repositories.ICommand.Xepired</a></div><div class="ttdeci">void Xepired(string orderId)</div></div>
+<div class="ttc" id="ainterface_n225_1_1_domain_1_1_repositories_1_1_i_command_html_a2afd07b9d9d5acb772290f79fc1708cb"><div class="ttname"><a href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a2afd07b9d9d5acb772290f79fc1708cb">N225.Domain.Repositories.ICommand.Revocation</a></div><div class="ttdeci">void Revocation(string orderId)</div></div>
+<div class="ttc" id="ainterface_n225_1_1_domain_1_1_repositories_1_1_i_command_html_a46d5ebaa227c5588912833634c5b167f"><div class="ttname"><a href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a46d5ebaa227c5588912833634c5b167f">N225.Domain.Repositories.ICommand.Correction</a></div><div class="ttdeci">void Correction(string orderId)</div></div>
+<div class="ttc" id="ainterface_n225_1_1_domain_1_1_repositories_1_1_i_command_html_a771f5935acba5c965aa1eaab80bea0f9"><div class="ttname"><a href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#a771f5935acba5c965aa1eaab80bea0f9">N225.Domain.Repositories.ICommand.Contrct</a></div><div class="ttdeci">void Contrct(string orderId)</div></div>
+<div class="ttc" id="ainterface_n225_1_1_domain_1_1_repositories_1_1_i_command_html_af15cc40499178a56fb7cb7a218122bb9"><div class="ttname"><a href="interface_n225_1_1_domain_1_1_repositories_1_1_i_command.html#af15cc40499178a56fb7cb7a218122bb9">N225.Domain.Repositories.ICommand.Oreder</a></div><div class="ttdeci">void Oreder(string orderId)</div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_repositories_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_repositories.html">N225.Domain.Repositories</a></div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00001">SendOrderEntity.cs:2</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

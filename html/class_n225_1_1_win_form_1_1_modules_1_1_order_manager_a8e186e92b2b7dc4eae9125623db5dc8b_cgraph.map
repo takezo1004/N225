@@ -1,0 +1,7 @@
+<map id="N225.WinForm.Modules.OrderManager.AddList" name="N225.WinForm.Modules.OrderManager.AddList">
+<area shape="rect" id="node1" title="オーダーリストをOrderDataGrid,OrdersCache、OrderInquiryListに追加表示する" alt="" coords="5,69,204,109"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html#ab75954841cc45f924c03e07a59551649" title="追加" alt="" coords="264,5,439,45"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_orders_cache.html#a81a1a1f101cc9f6da0fa929759b66f8d" title="ディクショナリー　追加" alt="" coords="264,69,439,109"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_win_form_1_1_modules_1_1_order_manager.html#af51d3a595e5f0c964053885b9e3c6380" title="Csvファイルに保存" alt="" coords="252,133,451,173"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_domain_1_1_modules_1_1_utils_1_1_directory_utils.html#afed6fbef01a16c2a6f72140fec6f79ca" title="C:\User\Adminstrator\AppDataN225.Domain.Modules.Utils.\lDirectoryUtils.LocalApplication\lDataPathocal" alt="" coords="499,126,697,181"/>
+</map>

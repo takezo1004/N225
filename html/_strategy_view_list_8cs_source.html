@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N225Project: C:/Users/takao2/N225(C#)/src/N225/N225.WinForm/Strategys/StrategyViewList.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">N225Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9dfeeea711b64c78137f56323d7c17f7.html">N225</a></li><li class="navelem"><a class="el" href="dir_8bfd8ca50f4834cd5fa98f3c85d17c82.html">N225.WinForm</a></li><li class="navelem"><a class="el" href="dir_a8abad2ebe8f32fbf0d6e86e6c59f437.html">Strategys</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">StrategyViewList.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_strategy_view_list_8cs.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_win_form_1_1_trade_view_models.html">N225.WinForm.TradeViewModels</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_n225_1_1_win_form_1_1_strategys.html">N225.WinForm.Strategys</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html">    6</a></span>    <span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code hl_class" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html">StrategyViewList</a> : <a class="code hl_class" href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html">ListViewBase</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#af9c80fa0b1c7d77a16291691524efc5d">    8</a></span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#af9c80fa0b1c7d77a16291691524efc5d">_dateTime</a> = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a2c2274ab2b88572c21566619eab72679">    9</a></span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a2c2274ab2b88572c21566619eab72679">_price</a> = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a7ead55671d2509f9ccffdcc5462ed71c">   10</a></span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a7ead55671d2509f9ccffdcc5462ed71c">_tradeType</a> = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#afa44983e5ab979dd3139c84b59757bea">   11</a></span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#afa44983e5ab979dd3139c84b59757bea">_side</a> = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#ac5fd2851c6fad7f634bb4b0f3c02289e">   23</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#ac5fd2851c6fad7f634bb4b0f3c02289e">StrategyViewList</a>(<span class="keywordtype">string</span> name, <span class="keywordtype">string</span> interval, <span class="keywordtype">string</span> dateTime = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">string</span> tradeType = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                                                <span class="keywordtype">string</span> side = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">string</span> price = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">string</span> description = <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a0d9bc709e2d155fec43e36b48312720e">Name</a> = name;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a89df4f08a8d8f5c93f961657b9072c64">Interval</a> = interval;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a380154ca0a369e5391b4c7c3ecbf9e39">DateTime</a> = dateTime;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a376f82eb52c621d772f9b1e420603506">Price</a> = price;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#acd9951b64fedaacc2eb1afe66239bbb8">TradeType</a> = tradeType;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_typedef" href="_trade_view_model_8cs.html#a3f1ca2cbd60a0920ffd16e9be8661acf">Side</a> = side;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a8752ba48c040704ca852c0fcf2a5a623">Description</a> = description;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a0d9bc709e2d155fec43e36b48312720e">   38</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a0d9bc709e2d155fec43e36b48312720e">Name</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a89df4f08a8d8f5c93f961657b9072c64">   39</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a89df4f08a8d8f5c93f961657b9072c64">Interval</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = String.Empty;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a380154ca0a369e5391b4c7c3ecbf9e39">   41</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a380154ca0a369e5391b4c7c3ecbf9e39">DateTime</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#af9c80fa0b1c7d77a16291691524efc5d">_dateTime</a>; }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keyword">set</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                SetPropety(ref <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#af9c80fa0b1c7d77a16291691524efc5d">_dateTime</a>, value);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#acd9951b64fedaacc2eb1afe66239bbb8">   50</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#acd9951b64fedaacc2eb1afe66239bbb8">TradeType</a></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a7ead55671d2509f9ccffdcc5462ed71c">_tradeType</a>; }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keyword">set</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                SetPropety(ref <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a7ead55671d2509f9ccffdcc5462ed71c">_tradeType</a>, value);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a28391e2463446620cbb8b2930912255c">   58</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_typedef" href="_trade_view_model_8cs.html#a3f1ca2cbd60a0920ffd16e9be8661acf">Side</a></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#afa44983e5ab979dd3139c84b59757bea">_side</a>; }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keyword">set</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                SetPropety(ref <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#afa44983e5ab979dd3139c84b59757bea">_side</a>, value);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a376f82eb52c621d772f9b1e420603506">   66</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a376f82eb52c621d772f9b1e420603506">Price</a></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a2c2274ab2b88572c21566619eab72679">_price</a>; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keyword">set</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                SetPropety(ref <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a2c2274ab2b88572c21566619eab72679">_price</a>, value);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a8752ba48c040704ca852c0fcf2a5a623">   74</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a8752ba48c040704ca852c0fcf2a5a623">Description</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = String.Empty;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="ttc" id="a_trade_view_model_8cs_html_a3f1ca2cbd60a0920ffd16e9be8661acf"><div class="ttname"><a href="_trade_view_model_8cs.html#a3f1ca2cbd60a0920ffd16e9be8661acf">Side</a></div><div class="ttdeci">N225.Domain.CommonConst.Side Side</div><div class="ttdef"><b>Definition:</b> <a href="_trade_view_model_8cs_source.html#l00024">TradeViewModel.cs:24</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html">N225.WinForm.Strategys.StrategyViewList</a></div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00006">StrategyViewList.cs:7</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_a0d9bc709e2d155fec43e36b48312720e"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a0d9bc709e2d155fec43e36b48312720e">N225.WinForm.Strategys.StrategyViewList.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00038">StrategyViewList.cs:38</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_a2c2274ab2b88572c21566619eab72679"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a2c2274ab2b88572c21566619eab72679">N225.WinForm.Strategys.StrategyViewList._price</a></div><div class="ttdeci">string _price</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00009">StrategyViewList.cs:9</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_a376f82eb52c621d772f9b1e420603506"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a376f82eb52c621d772f9b1e420603506">N225.WinForm.Strategys.StrategyViewList.Price</a></div><div class="ttdeci">string Price</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00066">StrategyViewList.cs:67</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_a380154ca0a369e5391b4c7c3ecbf9e39"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a380154ca0a369e5391b4c7c3ecbf9e39">N225.WinForm.Strategys.StrategyViewList.DateTime</a></div><div class="ttdeci">string DateTime</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00041">StrategyViewList.cs:42</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_a7ead55671d2509f9ccffdcc5462ed71c"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a7ead55671d2509f9ccffdcc5462ed71c">N225.WinForm.Strategys.StrategyViewList._tradeType</a></div><div class="ttdeci">string _tradeType</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00010">StrategyViewList.cs:10</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_a8752ba48c040704ca852c0fcf2a5a623"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a8752ba48c040704ca852c0fcf2a5a623">N225.WinForm.Strategys.StrategyViewList.Description</a></div><div class="ttdeci">string Description</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00074">StrategyViewList.cs:74</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_a89df4f08a8d8f5c93f961657b9072c64"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#a89df4f08a8d8f5c93f961657b9072c64">N225.WinForm.Strategys.StrategyViewList.Interval</a></div><div class="ttdeci">string Interval</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00039">StrategyViewList.cs:39</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_ac5fd2851c6fad7f634bb4b0f3c02289e"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#ac5fd2851c6fad7f634bb4b0f3c02289e">N225.WinForm.Strategys.StrategyViewList.StrategyViewList</a></div><div class="ttdeci">StrategyViewList(string name, string interval, string dateTime=&quot;&quot;, string tradeType=&quot;&quot;, string side=&quot;&quot;, string price=&quot;&quot;, string description=&quot;&quot;)</div><div class="ttdoc">コンストラクター</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00023">StrategyViewList.cs:23</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_acd9951b64fedaacc2eb1afe66239bbb8"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#acd9951b64fedaacc2eb1afe66239bbb8">N225.WinForm.Strategys.StrategyViewList.TradeType</a></div><div class="ttdeci">string TradeType</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00050">StrategyViewList.cs:51</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_af9c80fa0b1c7d77a16291691524efc5d"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#af9c80fa0b1c7d77a16291691524efc5d">N225.WinForm.Strategys.StrategyViewList._dateTime</a></div><div class="ttdeci">string _dateTime</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00008">StrategyViewList.cs:8</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list_html_afa44983e5ab979dd3139c84b59757bea"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_strategys_1_1_strategy_view_list.html#afa44983e5ab979dd3139c84b59757bea">N225.WinForm.Strategys.StrategyViewList._side</a></div><div class="ttdeci">string _side</div><div class="ttdef"><b>Definition:</b> <a href="_strategy_view_list_8cs_source.html#l00011">StrategyViewList.cs:11</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base_html"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html">N225.WinForm.TradeViewModels.ListViewBase</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_view_base_8cs_source.html#l00007">ListViewBase.cs:8</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_win_form_1_1_strategys_html"><div class="ttname"><a href="namespace_n225_1_1_win_form_1_1_strategys.html">N225.WinForm.Strategys</a></div><div class="ttdef"><b>Definition:</b> <a href="_strategy_model_8cs_source.html#l00010">StrategyModel.cs:11</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_win_form_1_1_trade_view_models_html"><div class="ttname"><a href="namespace_n225_1_1_win_form_1_1_trade_view_models.html">N225.WinForm.TradeViewModels</a></div><div class="ttdef"><b>Definition:</b> <a href="_create_send_order_new_8cs_source.html#l00006">CreateSendOrderNew.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

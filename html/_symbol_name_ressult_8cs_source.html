@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N225Project: C:/Users/takao2/N225(C#)/src/N225/N225.Domain/KabuElements/SymbolNameRessult.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">N225Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9dfeeea711b64c78137f56323d7c17f7.html">N225</a></li><li class="navelem"><a class="el" href="dir_11fc7df218b23d68e0ea8183b5718885.html">N225.Domain</a></li><li class="navelem"><a class="el" href="dir_4ee251b856524b5c3923f2b906527c5d.html">KabuElements</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SymbolNameRessult.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_symbol_name_ressult_8cs.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_codeplex_1_1_data.html">Codeplex.Data</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_entities.html">N225.Domain.Entities</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Newtonsoft.Json;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_elements.html">N225.Domain.Elements</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    [JsonObject(<span class="stringliteral">&quot;SymbolNameElement&quot;</span>)]</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html">SymbolNameElement</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [JsonProperty(<span class="stringliteral">&quot;Symbol&quot;</span>)]</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html#ae8a9ba20d36f9441a76459c6f30bc814">   13</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html#ae8a9ba20d36f9441a76459c6f30bc814">Symbol</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        [JsonProperty(<span class="stringliteral">&quot;SymbolName&quot;</span>)]</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html#a455fc9e749db4bf060bf4aff83ba090a">   16</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html#a455fc9e749db4bf060bf4aff83ba090a">SymbolName</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html">   19</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html">SymbolNameRessult</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html#ab8037297c8878dec5cd04b9dc1016301">   21</a></span>        <span class="keyword">private</span> <span class="keyword">static</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_symbol_name_result_entity.html">SymbolNameResultEntity</a> <a class="code hl_function" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html#ab8037297c8878dec5cd04b9dc1016301">SymbolNameToList</a>(<span class="keywordtype">string</span> stringJson)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_class" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html">SymbolNameElement</a> SymbolNameList = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="comment">//デシリアライズ</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            SymbolNameList =</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                    JsonConvert.DeserializeObject&lt;<a class="code hl_class" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html">SymbolNameElement</a>&gt;(stringJson);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">if</span> (SymbolNameList.<a class="code hl_property" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html#ae8a9ba20d36f9441a76459c6f30bc814">Symbol</a> == <span class="keywordtype">string</span>.Empty)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_symbol_name_result_entity.html">SymbolNameResultEntity</a>(SymbolNameList.<a class="code hl_property" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html#ae8a9ba20d36f9441a76459c6f30bc814">Symbol</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                                            SymbolNameList.<a class="code hl_property" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html#a455fc9e749db4bf060bf4aff83ba090a">SymbolName</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html#aaa90271c1ba7254971e98f6da27253c5">   35</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_symbol_name_result_entity.html">SymbolNameResultEntity</a> <a class="code hl_function" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html#aaa90271c1ba7254971e98f6da27253c5">SymbolNameCheck</a>(<span class="keywordtype">string</span> json)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            var objectJson = <a class="code hl_class" href="class_codeplex_1_1_data_1_1_dynamic_json.html">DynamicJson</a>.<a class="code hl_function" href="class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c">Parse</a>(json);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="comment">// レスポンス項目に「Code」がある場合、APIエラーがあったと判断</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">if</span> (objectJson.IsDefined(<span class="stringliteral">&quot;Code&quot;</span>))</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordtype">string</span> error = <span class="stringliteral">&quot;Eoor Code:&quot;</span> + objectJson[<span class="stringliteral">&quot;Code&quot;</span>] + <span class="stringliteral">&quot; &quot;</span> + objectJson[<span class="stringliteral">&quot;Message&quot;</span>];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception.html">APIResponsesException</a>(error);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html#ab8037297c8878dec5cd04b9dc1016301">SymbolNameToList</a>(json);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="ttc" id="aclass_codeplex_1_1_data_1_1_dynamic_json_html"><div class="ttname"><a href="class_codeplex_1_1_data_1_1_dynamic_json.html">Codeplex.Data.DynamicJson</a></div><div class="ttdef"><b>Definition:</b> <a href="_dynamic_json_8cs_source.html#l00025">DynamicJson.cs:26</a></div></div>
+<div class="ttc" id="aclass_codeplex_1_1_data_1_1_dynamic_json_html_a9cfff1dd980141c6d965c9ce3541628c"><div class="ttname"><a href="class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c">Codeplex.Data.DynamicJson.Parse</a></div><div class="ttdeci">static dynamic Parse(string json)</div><div class="ttdoc">from JsonSring to DynamicJson</div><div class="ttdef"><b>Definition:</b> <a href="_dynamic_json_8cs_source.html#l00035">DynamicJson.cs:35</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_elements_1_1_symbol_name_element_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html">N225.Domain.Elements.SymbolNameElement</a></div><div class="ttdef"><b>Definition:</b> <a href="_symbol_name_ressult_8cs_source.html#l00010">SymbolNameRessult.cs:11</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_elements_1_1_symbol_name_element_html_a455fc9e749db4bf060bf4aff83ba090a"><div class="ttname"><a href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html#a455fc9e749db4bf060bf4aff83ba090a">N225.Domain.Elements.SymbolNameElement.SymbolName</a></div><div class="ttdeci">string SymbolName</div><div class="ttdef"><b>Definition:</b> <a href="_symbol_name_ressult_8cs_source.html#l00016">SymbolNameRessult.cs:16</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_elements_1_1_symbol_name_element_html_ae8a9ba20d36f9441a76459c6f30bc814"><div class="ttname"><a href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_element.html#ae8a9ba20d36f9441a76459c6f30bc814">N225.Domain.Elements.SymbolNameElement.Symbol</a></div><div class="ttdeci">string Symbol</div><div class="ttdef"><b>Definition:</b> <a href="_symbol_name_ressult_8cs_source.html#l00013">SymbolNameRessult.cs:13</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html">N225.Domain.Elements.SymbolNameRessult</a></div><div class="ttdef"><b>Definition:</b> <a href="_symbol_name_ressult_8cs_source.html#l00019">SymbolNameRessult.cs:20</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult_html_aaa90271c1ba7254971e98f6da27253c5"><div class="ttname"><a href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html#aaa90271c1ba7254971e98f6da27253c5">N225.Domain.Elements.SymbolNameRessult.SymbolNameCheck</a></div><div class="ttdeci">static SymbolNameResultEntity SymbolNameCheck(string json)</div><div class="ttdef"><b>Definition:</b> <a href="_symbol_name_ressult_8cs_source.html#l00035">SymbolNameRessult.cs:35</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult_html_ab8037297c8878dec5cd04b9dc1016301"><div class="ttname"><a href="class_n225_1_1_domain_1_1_elements_1_1_symbol_name_ressult.html#ab8037297c8878dec5cd04b9dc1016301">N225.Domain.Elements.SymbolNameRessult.SymbolNameToList</a></div><div class="ttdeci">static SymbolNameResultEntity SymbolNameToList(string stringJson)</div><div class="ttdef"><b>Definition:</b> <a href="_symbol_name_ressult_8cs_source.html#l00021">SymbolNameRessult.cs:21</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_symbol_name_result_entity_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_symbol_name_result_entity.html">N225.Domain.Entities.SymbolNameResultEntity</a></div><div class="ttdef"><b>Definition:</b> <a href="_symbol_name_result_entity_8cs_source.html#l00003">SymbolNameResultEntity.cs:4</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception.html">N225.Domain.Exceptions.APIResponsesException</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_responses_exception_8cs_source.html#l00003">APIResponsesException.cs:4</a></div></div>
+<div class="ttc" id="anamespace_codeplex_1_1_data_html"><div class="ttname"><a href="namespace_codeplex_1_1_data.html">Codeplex.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_dynamic_json_8cs_source.html#l00023">DynamicJson.cs:24</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_elements_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_elements.html">N225.Domain.Elements</a></div><div class="ttdef"><b>Definition:</b> <a href="_board_8cs_source.html#l00005">Board.cs:6</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_entities_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_entities.html">N225.Domain.Entities</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_order_8cs_source.html#l00001">InputOrder.cs:2</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_exceptions_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_responses_exception_8cs_source.html#l00001">APIResponsesException.cs:2</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

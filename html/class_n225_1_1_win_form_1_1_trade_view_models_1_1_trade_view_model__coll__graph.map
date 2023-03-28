@@ -1,0 +1,8 @@
+<map id="N225.WinForm.TradeViewModels.TradeViewModel" name="N225.WinForm.TradeViewModels.TradeViewModel">
+<area shape="rect" id="node1" title=" " alt="" coords="499,77,717,117"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_view_models_1_1_view_model_base.html" title="VeiwModelの基底クラス" alt="" coords="253,5,367,31"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,164,31"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_infrastrucure_1_1_tcp_client.html" title=" " alt="" coords="217,55,403,80"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_web_socket___future.html" title=" " alt="" coords="213,105,407,145"/>
+<area shape="rect" id="node6" href="$class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html" title="注文API用新規・返済注文データフィールド" alt="" coords="220,169,400,209"/>
+</map>

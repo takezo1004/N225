@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N225Project: C:/Users/takao2/N225(C#)/src/N225/N225.Infrastrucure/KabuSuit/SendOrderCancel.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">N225Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9dfeeea711b64c78137f56323d7c17f7.html">N225</a></li><li class="navelem"><a class="el" href="dir_e80ea87dc10ff581e9f905b2ed0a8fbb.html">N225.Infrastrucure</a></li><li class="navelem"><a class="el" href="dir_f459d00b7bf142ea82c0b7f4739c26b9.html">KabuSuit</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SendOrderCancel.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_send_order_cancel_8cs.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain.html">N225.Domain</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_static_vlues.html">N225.Domain.StaticVlues</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is.html">N225.Infrastrucure.KubuAPIs</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_n225_1_1_infrastrucure_1_1_kabu_suit.html">N225.Infrastrucure.KabuSuit</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_cancel.html">    8</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_cancel.html">SendOrderCancel</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_cancel.html#a5e086ae6ec6e1781bc4f90a4a982916a">   15</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_cancel.html#a5e086ae6ec6e1781bc4f90a4a982916a">OrderCancel</a>(<span class="keywordtype">string</span> orderID)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="comment">//注文中かチェック</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordtype">int</span> _recivetype = <a class="code hl_class" href="class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html">OrderInquiryList</a>.<a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html#ad9fa1370cc5b01b58c07b79e8a893520">GetState</a>(orderID);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">if</span> (_recivetype == 8)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_exceptions_1_1_kabu_exception.html">KabuException</a>(<span class="stringliteral">&quot;キャンセルする注文はありません&quot;</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordtype">string</span> _orderID;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            _orderID = <a class="code hl_class" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_cancel_order___future.html">CancelOrder_Future</a>.<a class="code hl_function" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_cancel_order___future.html#a8dd67ab0ba296650c7e50389c330dd95">CancelOrder</a>(<a class="code hl_class" href="class_n225_1_1_domain_1_1_shared.html">Shared</a>.<a class="code hl_property" href="class_n225_1_1_domain_1_1_shared.html#a8d113f243eab6b2208c88ed21c8e782a">XAPIkey</a>, orderID, <a class="code hl_class" href="class_n225_1_1_domain_1_1_shared.html">Shared</a>.<a class="code hl_property" href="class_n225_1_1_domain_1_1_shared.html#abb241657d079f1c2fea422626220b777">Password</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_exceptions_1_1_kabu_exception_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_exceptions_1_1_kabu_exception.html">N225.Domain.Exceptions.KabuException</a></div><div class="ttdef"><b>Definition:</b> <a href="_kabu_exception_8cs_source.html#l00003">KabuException.cs:4</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_shared_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_shared.html">N225.Domain.Shared</a></div><div class="ttdef"><b>Definition:</b> <a href="_shared_8cs_source.html#l00005">Shared.cs:6</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_shared_html_a8d113f243eab6b2208c88ed21c8e782a"><div class="ttname"><a href="class_n225_1_1_domain_1_1_shared.html#a8d113f243eab6b2208c88ed21c8e782a">N225.Domain.Shared.XAPIkey</a></div><div class="ttdeci">static string XAPIkey</div><div class="ttdef"><b>Definition:</b> <a href="_shared_8cs_source.html#l00013">Shared.cs:13</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_shared_html_abb241657d079f1c2fea422626220b777"><div class="ttname"><a href="class_n225_1_1_domain_1_1_shared.html#abb241657d079f1c2fea422626220b777">N225.Domain.Shared.Password</a></div><div class="ttdeci">static string Password</div><div class="ttdef"><b>Definition:</b> <a href="_shared_8cs_source.html#l00007">Shared.cs:7</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html">N225.Domain.StaticVlues.OrderInquiryList</a></div><div class="ttdef"><b>Definition:</b> <a href="_order_inquiry_list_8cs_source.html#l00008">OrderInquiryList.cs:9</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list_html_ad9fa1370cc5b01b58c07b79e8a893520"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html#ad9fa1370cc5b01b58c07b79e8a893520">N225.Domain.StaticVlues.OrderInquiryList.GetState</a></div><div class="ttdeci">static int GetState(string orderID)</div><div class="ttdoc">ReciveType取得</div><div class="ttdef"><b>Definition:</b> <a href="_order_inquiry_list_8cs_source.html#l00099">OrderInquiryList.cs:99</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_cancel_html"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_cancel.html">N225.Infrastrucure.KabuSuit.SendOrderCancel</a></div><div class="ttdef"><b>Definition:</b> <a href="_send_order_cancel_8cs_source.html#l00008">SendOrderCancel.cs:9</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_cancel_html_a5e086ae6ec6e1781bc4f90a4a982916a"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_cancel.html#a5e086ae6ec6e1781bc4f90a4a982916a">N225.Infrastrucure.KabuSuit.SendOrderCancel.OrderCancel</a></div><div class="ttdeci">static void OrderCancel(string orderID)</div><div class="ttdoc">注文取消し処理</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_cancel_8cs_source.html#l00015">SendOrderCancel.cs:15</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_cancel_order___future_html"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_cancel_order___future.html">N225.Infrastrucure.KubuAPIs.CancelOrder_Future</a></div><div class="ttdef"><b>Definition:</b> <a href="_cancel_order___future_8cs_source.html#l00009">CancelOrder_Future.cs:10</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_cancel_order___future_html_a8dd67ab0ba296650c7e50389c330dd95"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_cancel_order___future.html#a8dd67ab0ba296650c7e50389c330dd95">N225.Infrastrucure.KubuAPIs.CancelOrder_Future.CancelOrder</a></div><div class="ttdeci">static string CancelOrder(string apikey, string orderId, string pasword)</div><div class="ttdef"><b>Definition:</b> <a href="_cancel_order___future_8cs_source.html#l00011">CancelOrder_Future.cs:11</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_exceptions_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_responses_exception_8cs_source.html#l00001">APIResponsesException.cs:2</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_static_vlues_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_static_vlues.html">N225.Domain.StaticVlues</a></div><div class="ttdef"><b>Definition:</b> <a href="_order_inquiry_list_8cs_source.html#l00006">OrderInquiryList.cs:7</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_html"><div class="ttname"><a href="namespace_n225_1_1_domain.html">N225.Domain</a></div><div class="ttdef"><b>Definition:</b> <a href="_best_market_oder_8cs_source.html#l00006">BestMarketOder.cs:7</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_infrastrucure_1_1_kabu_suit_html"><div class="ttname"><a href="namespace_n225_1_1_infrastrucure_1_1_kabu_suit.html">N225.Infrastrucure.KabuSuit</a></div><div class="ttdef"><b>Definition:</b> <a href="_kabu_suite_api_token_8cs_source.html#l00004">KabuSuiteApiToken.cs:5</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is_html"><div class="ttname"><a href="namespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is.html">N225.Infrastrucure.KubuAPIs</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_soft_limit_8cs_source.html#l00006">APISoftLimit.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

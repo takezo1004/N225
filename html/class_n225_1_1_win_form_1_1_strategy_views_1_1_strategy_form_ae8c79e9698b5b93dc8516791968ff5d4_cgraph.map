@@ -1,0 +1,31 @@
+<map id="N225.WinForm.StrategyViews.StrategyForm.InitializeComponent" name="N225.WinForm.StrategyViews.StrategyForm.InitializeComponent">
+<area shape="rect" id="node1" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="5,491,224,531"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a8979f200ea8172382873c4471d85f4f0" title=" " alt="" coords="272,69,499,109"/>
+<area shape="rect" id="node7" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a32eb03075a45d61f808ec9bb2fe646bd" title=" " alt="" coords="274,133,497,173"/>
+<area shape="rect" id="node9" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#aa53e87bc59db8a9b47ac2e22fa53b0ce" title=" " alt="" coords="283,197,488,237"/>
+<area shape="rect" id="node10" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a11dbeb3017ab172f6b48f0af55c4fe85" title=" " alt="" coords="285,261,486,301"/>
+<area shape="rect" id="node11" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#ae6c80d4076c8f5108da435629ce47773" title=" " alt="" coords="283,326,488,381"/>
+<area shape="rect" id="node14" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#af5cc6afd58dd3ecef49ee6ac6eee24c3" title="CheckBoxの値取得呼び出し" alt="" coords="283,405,488,459"/>
+<area shape="rect" id="node15" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#af671aa0b8124a946a8a8e02e94bb8a29" title="CheckBoxの値取得" alt="" coords="283,483,488,538"/>
+<area shape="rect" id="node16" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a5aca98f3b7dc6d511faa6e7c8126341a" title=" " alt="" coords="283,562,488,617"/>
+<area shape="rect" id="node18" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a89a821b3ae42a0f950825325e06e86c1" title=" " alt="" coords="285,641,486,695"/>
+<area shape="rect" id="node25" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#ab3aef44ff38f2a4b43b5a484a52c0d40" title=" " alt="" coords="285,719,486,774"/>
+<area shape="rect" id="node26" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a20ad548444cedd6b69b62df0878d0316" title=" " alt="" coords="276,799,495,839"/>
+<area shape="rect" id="node28" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#aa026b22d6148593a0fb5d6b581c44590" title=" " alt="" coords="285,863,486,918"/>
+<area shape="rect" id="node29" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#ad401e45f4cd705202a23272552811761" title=" " alt="" coords="285,943,486,983"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_win_form_1_1_strategys_1_1_strategy_model.html#a10c7e4125746b858661d8e0c1d0f7691" title="StrategyDataGridに１行表示" alt="" coords="547,69,769,109"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_strategy_list_cash.html#a3755f2734284b31fa65c78d10095cd5f" title="追加" alt="" coords="841,5,1016,45"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_strategy_list_cash.html#afb7b073ac23726db265704339bc6e506" title="要素削除" alt="" coords="841,133,1016,173"/>
+<area shape="rect" id="node6" href="$class_n225_1_1_win_form_1_1_strategys_1_1_strategy_model.html#acb7b5e63b0d9dbe4e0ca46c700e35d33" title="Input data check" alt="" coords="817,69,1040,109"/>
+<area shape="rect" id="node8" href="$class_n225_1_1_win_form_1_1_strategys_1_1_strategy_model.html#a6652c5136e4539dd64184c34158edcbd" title="一行削除" alt="" coords="547,133,769,173"/>
+<area shape="rect" id="node12" href="$class_n225_1_1_win_form_1_1_strategys_1_1_strategy_model.html#ad00e7a7a673af90602b7cb05481acfa1" title="選択行をプロパティに設定" alt="" coords="547,333,769,373"/>
+<area shape="rect" id="node13" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_strategy_list_cash.html#a8927a4fb38e2d9138e150fde119b0203" title="要素取得" alt="" coords="835,333,1023,373"/>
+<area shape="rect" id="node17" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_strategy_list_cash.html#a1d0b532a3379eef59ed44559d4411bdc" title="checkデータ取得" alt="" coords="566,544,750,584"/>
+<area shape="rect" id="node19" href="$class_n225_1_1_domain_1_1_modules_1_1_auth.html#a712fac0f0a157fe7673b946d4e317162" title=" " alt="" coords="564,723,752,763"/>
+<area shape="rect" id="node21" href="$class_n225_1_1_win_form_1_1_modules_1_1_strategy_maneger.html#ab1b123fda9d9564c3790334bec781bfe" title="キャッシュデータをCSVファイルに保存する。" alt="" coords="551,608,765,648"/>
+<area shape="rect" id="node24" href="$class_n225_1_1_domain_1_1_modules_1_1_auth.html#aa7dd6ee4adf0a29f80b84632a1a00010" title=" " alt="" coords="835,707,1023,747"/>
+<area shape="rect" id="node20" href="$class_n225_1_1_domain_1_1_modules_1_1_auth.html#a9c89f3e2ac86d912638edb2d597aa58d" title=" " alt="" coords="835,780,1023,820"/>
+<area shape="rect" id="node22" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_strategy_list_cash.html#a7e6ce0b713888d60df24fdeddba76c43" title="ディクショナリーのコピーを取得" alt="" coords="841,553,1016,593"/>
+<area shape="rect" id="node23" href="$class_n225_1_1_domain_1_1_modules_1_1_utils_1_1_directory_utils.html#afed6fbef01a16c2a6f72140fec6f79ca" title="C:\User\Adminstrator\AppDataN225.Domain.Modules.Utils.\lDirectoryUtils.LocalApplication\lDataPathocal" alt="" coords="829,618,1028,673"/>
+<area shape="rect" id="node27" href="$class_n225_1_1_domain_1_1_modules_1_1_auth.html#ae449adef731368ec9254396b447c29f9" title=" " alt="" coords="564,837,752,877"/>
+</map>

@@ -138,10 +138,11 @@ namespace N225.WinForm.Modules
             {
                 PositionList.RemoveAt(row);
             });
-
         }
+
+        
         /// <summary>
-        /// 自動取引約定番号の取得
+        /// 自動取引約定番号のリスト取得
         /// </summary>
         /// <param name="strtegy"></param>
         /// <param name="interval"></param>
@@ -157,15 +158,19 @@ namespace N225.WinForm.Modules
             {
                 foreach (var id in listid)
                 {
-                    if (PositionsCache.IsExecutionId(id) == false)
-                    {
-                        //PositionAutoにIdがありPositionsCacheにない場合はPositionAuto Id　削除
-                        PositionAuto.Remove(id);
-                    }
-                    else
+                   
+                    if (PositionsCache.IsExecutionId(id))
                     {
                         listExecution.Add(id);
+                        
                     }
+                   /*
+                    else
+                    {
+                        //PositionAutoにIdがありPositionsCacheにない場合はPositionAuto Id　削除
+                        //PositionAuto.Remove(id); 
+                    }
+                    */
                 }
             }
             return listExecution;

@@ -1,6 +1,7 @@
 ﻿using N225.Domain.CommonConst;
 using N225.Domain.Entities;
 using N225.Domain.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,6 +11,7 @@ namespace N225.Domain.StaticVlues
     {
         /// <summary>
         /// ディクショナリー　PositionList
+        /// key executionID
         /// </summary>
         public static Dictionary<string, PositionListEntity> _positionsCache =
                                     new Dictionary<string, PositionListEntity>();
@@ -149,10 +151,20 @@ namespace N225.Domain.StaticVlues
             List<PositionListEntity> Items = new List<PositionListEntity>();
 
             //strtegy ,intervalと同じものの新しいディクショナリーを作成する。
-
+            
             var NewDic = _positionsCache.Where(x => x.Value.TradeMode.Value == 1 && x.Value.Strategy == strtegy && x.Value.Iterval ==
                           interval && x.Value.Side.Value == _side).ToDictionary(auto => auto.Key, auto => auto.Value.OrderID);
             return NewDic.Keys.ToList();
+        }
+
+        public static string GetExecutionId(string strtegy, int interval)
+        {
+            PositionListEntity tpl;
+            string id = string.Empty;
+
+            if (_positionsCache.TryGetValue(strtegy, out tpl))
+                id = tpl.ExecutionID;
+            return id;
         }
     }
 }

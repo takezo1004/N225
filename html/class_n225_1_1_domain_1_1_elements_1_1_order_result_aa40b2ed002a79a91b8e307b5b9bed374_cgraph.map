@@ -1,0 +1,7 @@
+<map id="N225.Domain.Elements.OrderResult.GetOrderEntity" name="N225.Domain.Elements.OrderResult.GetOrderEntity">
+<area shape="rect" id="node1" title=" " alt="" coords="5,61,200,101"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_domain_1_1_elements_1_1_order_result.html#a13613f8511c1f55123de72ec047497c2" title=" " alt="" coords="248,29,443,69"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_domain_1_1_elements_1_1_order_result.html#ad6ed1c969bec6f818bc58d1c11761490" title="OrdersResultModelからOrderResultListEntityを作成しOrdersCacheに追加する" alt="" coords="248,93,443,133"/>
+<area shape="rect" id="node3" href="$class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c" title="from JsonSring to DynamicJson" alt="" coords="491,29,684,69"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_domain_1_1_value_objects_1_1_side.html#a43c9d2c705ddadb751f0fa3ecd8d4d12" title=" " alt="" coords="494,93,681,133"/>
+</map>

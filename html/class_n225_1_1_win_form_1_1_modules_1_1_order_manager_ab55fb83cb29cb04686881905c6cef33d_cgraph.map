@@ -1,0 +1,5 @@
+<map id="N225.WinForm.Modules.OrderManager.Cancel" name="N225.WinForm.Modules.OrderManager.Cancel">
+<area shape="rect" id="node1" title="注文取消" alt="" coords="5,37,204,77"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_modules_1_1_order_manager.html#a172062cfd46e02e14e6e173454d56a40" title="OrderDataGrid選択行番号の取得" alt="" coords="252,5,451,45"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html#a1a56408010fd3ab0c1afeeaf7c07fe40" title="要素削除" alt="" coords="264,69,439,109"/>
+</map>

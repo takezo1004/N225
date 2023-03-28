@@ -59,11 +59,12 @@ namespace N225.WinForm.Modules
 
         /// <summary>
         /// strategy signal 受信データを該当keyのgridviewに書きこみ表示する
+        /// データが無い場合は戻り値　false ,ある場合は True
         /// </summary>
         /// <param name="strategyViews"></param>
         /// <param name="fileld"></param>
-        /// <exception cref="NotImplementedException"></exception>
-        public static void UpDate(BindingList<StrategyViewList> strategyViews, InputOrder fileld)
+        /// <returns>bool</returns>
+        public static bool UpDate(BindingList<StrategyViewList> strategyViews, InputOrder fileld)
         {
             int row = strategyViews.Count;
 
@@ -83,7 +84,7 @@ namespace N225.WinForm.Modules
                 }
             });
             //cash更新
-            StrategyListCash.UpDate(fileld);
+            return StrategyListCash.UpDate(fileld);
         }
 
         /// <summary>

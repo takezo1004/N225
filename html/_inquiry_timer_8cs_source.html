@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N225Project: C:/Users/takao2/N225(C#)/src/N225/N225.WinForm/BackgrondWorkers/InquiryTimer.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">N225Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9dfeeea711b64c78137f56323d7c17f7.html">N225</a></li><li class="navelem"><a class="el" href="dir_8bfd8ca50f4834cd5fa98f3c85d17c82.html">N225.WinForm</a></li><li class="navelem"><a class="el" href="dir_9652b4fe9c193864b0e6852fcec35d2d.html">BackgrondWorkers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">InquiryTimer.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_inquiry_timer_8cs.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_codeplex_1_1_data.html">Codeplex.Data</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain.html">N225.Domain</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_elements.html">N225.Domain.Elements</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_entities.html">N225.Domain.Entities</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_static_vlues.html">N225.Domain.StaticVlues</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is.html">N225.Infrastrucure.KubuAPIs</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>Newtonsoft.Json;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using </span>System.Threading;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespace_n225_1_1_win_form.html">   13</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_n225_1_1_win_form_1_1_backgrond_workers.html">N225.WinForm.BackgrondWorkers</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html">   15</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html">InquiryTimer</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae116ad0445bf6895b579dbed4ac66556">   17</a></span>        <span class="keyword">public</span> <span class="keyword">event</span> EventHandler&lt;OrdersResultModel&gt; <a class="code hl_event" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae116ad0445bf6895b579dbed4ac66556">InquiryOrderEventHandler</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae21ba5c5b99172bde57ca2c118fe336d">   18</a></span>        <span class="keyword">public</span> <span class="keyword">event</span> EventHandler&lt;bool&gt; <a class="code hl_event" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae21ba5c5b99172bde57ca2c118fe336d">OutquiryStatEventHandler</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae99686317497264632ef0b0744876d51">   19</a></span>        <span class="keyword">private</span> Timer <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae99686317497264632ef0b0744876d51">_timer</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#aa94ae65619c5e0ff843f635567bb969c">   20</a></span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#aa94ae65619c5e0ff843f635567bb969c">_isWork</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ab1067c38172f4cb50e16446bc950a4f2">   25</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ab1067c38172f4cb50e16446bc950a4f2">InquiryTimer</a>()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae99686317497264632ef0b0744876d51">_timer</a> = <span class="keyword">new</span> Timer(<a class="code hl_function" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a9c9bea5c3257dee04d8bf63bd22c2b0c">Callback</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a9964596ae85b9518b3b0a6fdf1ed8e11">   29</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a9964596ae85b9518b3b0a6fdf1ed8e11">Start</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae99686317497264632ef0b0744876d51">_timer</a>.Change(1000, 1000);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ac8d7908ef8157424aed2f1a15891ad26">   33</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ac8d7908ef8157424aed2f1a15891ad26">Stop</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae99686317497264632ef0b0744876d51">_timer</a>.Change(Timeout.Infinite, Timeout.Infinite);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a9c9bea5c3257dee04d8bf63bd22c2b0c">   42</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a9c9bea5c3257dee04d8bf63bd22c2b0c">Callback</a>(<span class="keywordtype">object</span> o)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#aa94ae65619c5e0ff843f635567bb969c">_isWork</a>)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#aa94ae65619c5e0ff843f635567bb969c">_isWork</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="comment">//注文中のデータが有るかチェック OrderInquiryList</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                Dictionary&lt;string, OrderListEntity&gt; list =</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    <a class="code hl_class" href="class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html">OrderInquiryList</a>.<a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html#acc048b8ae1093512f68d190ac2048c3f">IsList</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordflow">if</span> (list == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    <a class="code hl_event" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae21ba5c5b99172bde57ca2c118fe336d">OutquiryStatEventHandler</a>(<span class="keyword">this</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_order_entity.html">OrderEntity</a> entity;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordtype">int</span> count = list.Count;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, OrderListEntity&gt; kvp <span class="keywordflow">in</span> list)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    entity = <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_order_entity.html">OrderEntity</a>()</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        Product = <span class="stringliteral">&quot;3&quot;</span>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        OrderID = kvp.Key</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    };</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    List&lt;OrdersResultModel&gt; _ordersList = <a class="code hl_function" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a92ab2a49f241c26a26c66b647968ed2d">Oorder</a>(entity);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    <span class="keywordflow">if</span> (_ordersList != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                        <a class="code hl_class" href="class_n225_1_1_domain_1_1_elements_1_1_orders_result_model.html">OrdersResultModel</a> _order = _ordersList[0];</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                        <span class="comment">//int _timeForce = _order.TimeInForce;        //1:fas 2:fak 3:fok</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                        <span class="comment">//int _orderState = _order.OrderState;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"></span>                        <span class="keywordtype">int</span> _count = _order.<a class="code hl_property" href="class_n225_1_1_domain_1_1_elements_1_1_orders_result_model.html#a0b460f172849a7bc9d3c74aad80c9629">Details</a>.Count;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                        <span class="keywordtype">int</span> _state = _order.<a class="code hl_property" href="class_n225_1_1_domain_1_1_elements_1_1_orders_result_model.html#a0b460f172849a7bc9d3c74aad80c9629">Details</a>[_count - 1].State;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                        <span class="keywordtype">int</span> _reciveType = _order.<a class="code hl_property" href="class_n225_1_1_domain_1_1_elements_1_1_orders_result_model.html#a0b460f172849a7bc9d3c74aad80c9629">Details</a>[_count - 1].RecType;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                        <span class="keywordflow">if</span> (_reciveType != kvp.Value.ReciveType.Value)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                        {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                            <a class="code hl_event" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae116ad0445bf6895b579dbed4ac66556">InquiryOrderEventHandler</a>(<span class="keyword">this</span>, _order);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                        <a class="code hl_event" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae21ba5c5b99172bde57ca2c118fe336d">OutquiryStatEventHandler</a>(<span class="keyword">this</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                        <a class="code hl_event" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae21ba5c5b99172bde57ca2c118fe336d">OutquiryStatEventHandler</a>(<span class="keyword">this</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">finally</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <a class="code hl_variable" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#aa94ae65619c5e0ff843f635567bb969c">_isWork</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a92ab2a49f241c26a26c66b647968ed2d">  105</a></span>        <span class="keyword">private</span> List&lt;OrdersResultModel&gt; <a class="code hl_function" href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a92ab2a49f241c26a26c66b647968ed2d">Oorder</a>(<a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_order_entity.html">OrderEntity</a> entity)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordtype">string</span> retVlue = <a class="code hl_class" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_orders___future.html">Orders_Future</a>.<a class="code hl_function" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_orders___future.html#a9dda3b4219e0dca1b0820e102405d57a">Orders</a>(<a class="code hl_class" href="class_n225_1_1_domain_1_1_shared.html">Shared</a>.<a class="code hl_property" href="class_n225_1_1_domain_1_1_shared.html#a8d113f243eab6b2208c88ed21c8e782a">XAPIkey</a>, entity);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            var objectJson = <a class="code hl_class" href="class_codeplex_1_1_data_1_1_dynamic_json.html">DynamicJson</a>.<a class="code hl_function" href="class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c">Parse</a>(retVlue);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">if</span> (objectJson.IsDefined(<span class="stringliteral">&quot;Code&quot;</span>))</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keywordtype">string</span> error = <span class="stringliteral">&quot;Eoor Code:&quot;</span> + objectJson[<span class="stringliteral">&quot;Code&quot;</span>] + <span class="stringliteral">&quot; &quot;</span> + objectJson[<span class="stringliteral">&quot;Message&quot;</span>];</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception.html">APIResponsesException</a>(error);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="comment">//デシリアライズ</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;List&lt;OrdersResultModel&gt;&gt;(retVlue);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="ttc" id="aclass_codeplex_1_1_data_1_1_dynamic_json_html"><div class="ttname"><a href="class_codeplex_1_1_data_1_1_dynamic_json.html">Codeplex.Data.DynamicJson</a></div><div class="ttdef"><b>Definition:</b> <a href="_dynamic_json_8cs_source.html#l00025">DynamicJson.cs:26</a></div></div>
+<div class="ttc" id="aclass_codeplex_1_1_data_1_1_dynamic_json_html_a9cfff1dd980141c6d965c9ce3541628c"><div class="ttname"><a href="class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c">Codeplex.Data.DynamicJson.Parse</a></div><div class="ttdeci">static dynamic Parse(string json)</div><div class="ttdoc">from JsonSring to DynamicJson</div><div class="ttdef"><b>Definition:</b> <a href="_dynamic_json_8cs_source.html#l00035">DynamicJson.cs:35</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_elements_1_1_orders_result_model_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_elements_1_1_orders_result_model.html">N225.Domain.Elements.OrdersResultModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_order_result_8cs_source.html#l00012">OrderResult.cs:13</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_elements_1_1_orders_result_model_html_a0b460f172849a7bc9d3c74aad80c9629"><div class="ttname"><a href="class_n225_1_1_domain_1_1_elements_1_1_orders_result_model.html#a0b460f172849a7bc9d3c74aad80c9629">N225.Domain.Elements.OrdersResultModel.Details</a></div><div class="ttdeci">List&lt; OrderDetails &gt; Details</div><div class="ttdef"><b>Definition:</b> <a href="_order_result_8cs_source.html#l00073">OrderResult.cs:73</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_order_entity_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_order_entity.html">N225.Domain.Entities.OrderEntity</a></div><div class="ttdoc">商品照会データフィールド</div><div class="ttdef"><b>Definition:</b> <a href="_order_entity_8cs_source.html#l00006">OrderEntity.cs:7</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception.html">N225.Domain.Exceptions.APIResponsesException</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_responses_exception_8cs_source.html#l00003">APIResponsesException.cs:4</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_shared_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_shared.html">N225.Domain.Shared</a></div><div class="ttdef"><b>Definition:</b> <a href="_shared_8cs_source.html#l00005">Shared.cs:6</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_shared_html_a8d113f243eab6b2208c88ed21c8e782a"><div class="ttname"><a href="class_n225_1_1_domain_1_1_shared.html#a8d113f243eab6b2208c88ed21c8e782a">N225.Domain.Shared.XAPIkey</a></div><div class="ttdeci">static string XAPIkey</div><div class="ttdef"><b>Definition:</b> <a href="_shared_8cs_source.html#l00013">Shared.cs:13</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html">N225.Domain.StaticVlues.OrderInquiryList</a></div><div class="ttdef"><b>Definition:</b> <a href="_order_inquiry_list_8cs_source.html#l00008">OrderInquiryList.cs:9</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list_html_acc048b8ae1093512f68d190ac2048c3f"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html#acc048b8ae1093512f68d190ac2048c3f">N225.Domain.StaticVlues.OrderInquiryList.IsList</a></div><div class="ttdeci">static Dictionary&lt; string, OrderListEntity &gt; IsList()</div><div class="ttdoc">ディクショナリー取得</div><div class="ttdef"><b>Definition:</b> <a href="_order_inquiry_list_8cs_source.html#l00081">OrderInquiryList.cs:81</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_orders___future_html"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_orders___future.html">N225.Infrastrucure.KubuAPIs.Orders_Future</a></div><div class="ttdef"><b>Definition:</b> <a href="_orders___future_8cs_source.html#l00007">Orders_Future.cs:8</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_orders___future_html_a9dda3b4219e0dca1b0820e102405d57a"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_orders___future.html#a9dda3b4219e0dca1b0820e102405d57a">N225.Infrastrucure.KubuAPIs.Orders_Future.Orders</a></div><div class="ttdeci">static string Orders(string apikey, OrderEntity entity)</div><div class="ttdef"><b>Definition:</b> <a href="_orders___future_8cs_source.html#l00009">Orders_Future.cs:9</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html">N225.WinForm.BackgrondWorkers.InquiryTimer</a></div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00015">InquiryTimer.cs:16</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html_a92ab2a49f241c26a26c66b647968ed2d"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a92ab2a49f241c26a26c66b647968ed2d">N225.WinForm.BackgrondWorkers.InquiryTimer.Oorder</a></div><div class="ttdeci">List&lt; OrdersResultModel &gt; Oorder(OrderEntity entity)</div><div class="ttdoc">オーダー照会</div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00105">InquiryTimer.cs:105</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html_a9964596ae85b9518b3b0a6fdf1ed8e11"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a9964596ae85b9518b3b0a6fdf1ed8e11">N225.WinForm.BackgrondWorkers.InquiryTimer.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00029">InquiryTimer.cs:29</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html_a9c9bea5c3257dee04d8bf63bd22c2b0c"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a9c9bea5c3257dee04d8bf63bd22c2b0c">N225.WinForm.BackgrondWorkers.InquiryTimer.Callback</a></div><div class="ttdeci">void Callback(object o)</div><div class="ttdoc">BackGrand　照会処理</div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00042">InquiryTimer.cs:42</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html_aa94ae65619c5e0ff843f635567bb969c"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#aa94ae65619c5e0ff843f635567bb969c">N225.WinForm.BackgrondWorkers.InquiryTimer._isWork</a></div><div class="ttdeci">bool _isWork</div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00020">InquiryTimer.cs:20</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html_ab1067c38172f4cb50e16446bc950a4f2"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ab1067c38172f4cb50e16446bc950a4f2">N225.WinForm.BackgrondWorkers.InquiryTimer.InquiryTimer</a></div><div class="ttdeci">InquiryTimer()</div><div class="ttdoc">BackGrand Timer設定</div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00025">InquiryTimer.cs:25</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html_ac8d7908ef8157424aed2f1a15891ad26"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ac8d7908ef8157424aed2f1a15891ad26">N225.WinForm.BackgrondWorkers.InquiryTimer.Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00033">InquiryTimer.cs:33</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html_ae116ad0445bf6895b579dbed4ac66556"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae116ad0445bf6895b579dbed4ac66556">N225.WinForm.BackgrondWorkers.InquiryTimer.InquiryOrderEventHandler</a></div><div class="ttdeci">EventHandler&lt; OrdersResultModel &gt; InquiryOrderEventHandler</div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00017">InquiryTimer.cs:17</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html_ae21ba5c5b99172bde57ca2c118fe336d"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae21ba5c5b99172bde57ca2c118fe336d">N225.WinForm.BackgrondWorkers.InquiryTimer.OutquiryStatEventHandler</a></div><div class="ttdeci">EventHandler&lt; bool &gt; OutquiryStatEventHandler</div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00018">InquiryTimer.cs:18</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer_html_ae99686317497264632ef0b0744876d51"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#ae99686317497264632ef0b0744876d51">N225.WinForm.BackgrondWorkers.InquiryTimer._timer</a></div><div class="ttdeci">Timer _timer</div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00019">InquiryTimer.cs:19</a></div></div>
+<div class="ttc" id="anamespace_codeplex_1_1_data_html"><div class="ttname"><a href="namespace_codeplex_1_1_data.html">Codeplex.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_dynamic_json_8cs_source.html#l00023">DynamicJson.cs:24</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_elements_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_elements.html">N225.Domain.Elements</a></div><div class="ttdef"><b>Definition:</b> <a href="_board_8cs_source.html#l00005">Board.cs:6</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_entities_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_entities.html">N225.Domain.Entities</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_order_8cs_source.html#l00001">InputOrder.cs:2</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_exceptions_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_responses_exception_8cs_source.html#l00001">APIResponsesException.cs:2</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_static_vlues_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_static_vlues.html">N225.Domain.StaticVlues</a></div><div class="ttdef"><b>Definition:</b> <a href="_order_inquiry_list_8cs_source.html#l00006">OrderInquiryList.cs:7</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_html"><div class="ttname"><a href="namespace_n225_1_1_domain.html">N225.Domain</a></div><div class="ttdef"><b>Definition:</b> <a href="_best_market_oder_8cs_source.html#l00006">BestMarketOder.cs:7</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is_html"><div class="ttname"><a href="namespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is.html">N225.Infrastrucure.KubuAPIs</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_soft_limit_8cs_source.html#l00006">APISoftLimit.cs:7</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_win_form_1_1_backgrond_workers_html"><div class="ttname"><a href="namespace_n225_1_1_win_form_1_1_backgrond_workers.html">N225.WinForm.BackgrondWorkers</a></div><div class="ttdef"><b>Definition:</b> <a href="_inquiry_timer_8cs_source.html#l00013">InquiryTimer.cs:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

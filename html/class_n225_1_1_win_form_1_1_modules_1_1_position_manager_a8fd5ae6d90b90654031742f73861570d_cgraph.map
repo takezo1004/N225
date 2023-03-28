@@ -1,0 +1,8 @@
+<map id="N225.WinForm.Modules.PositionManager.Deleted" name="N225.WinForm.Modules.PositionManager.Deleted">
+<area shape="rect" id="node1" title="PositionDataGrid、PositionsCache、PositionAutoに１行削除" alt="" coords="5,69,219,109"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_modules_1_1_position_manager.html#a3ae79617837eb8282e24fc94473e42b4" title="executionIDに該当するPositionDataGridインデックス番号" alt="" coords="267,5,480,45"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a2bbe982a16cb14c3b2b1e19557d84bd7" title="要素削除" alt="" coords="286,69,461,109"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_win_form_1_1_modules_1_1_position_auto.html#a06193a001e21618ceca02cd40d76d50e" title="ディクショナリー要素削除" alt="" coords="267,133,480,173"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_win_form_1_1_modules_1_1_position_auto.html#a02239d84c089546197ec6dc9c8b28bfc" title="Csvファイルに保存" alt="" coords="528,133,741,173"/>
+<area shape="rect" id="node6" href="$class_n225_1_1_domain_1_1_modules_1_1_utils_1_1_directory_utils.html#afed6fbef01a16c2a6f72140fec6f79ca" title="C:\User\Adminstrator\AppDataN225.Domain.Modules.Utils.\lDirectoryUtils.LocalApplication\lDataPathocal" alt="" coords="789,126,988,181"/>
+</map>

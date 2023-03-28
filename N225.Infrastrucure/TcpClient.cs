@@ -6,193 +6,176 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace N225.Infrastrucure
 {
+    /// <summary>
+    /// TcpClientクラス
+    /// </summary>
     public class TcpClient
     {
-        private Socket mySocket = null;
-        private MemoryStream myMs;
-        private readonly object syncLock = new object();
-        private Encoding enc = Encoding.UTF8;
+        private static log4net.ILog _logger = log4net.LogManager.GetLogger(
+                          System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        //private byte[] _buffer = new byte[1024];
+        // 受信データのレスポンス
+        private string response = string.Empty;
+        private Socket client = null;
+        private StateObject state = null;
+        private string _host;
+        private int _port;
 
-        public delegate void ReceiveEventHndler(object sender, TcpClientModel e);
-        public event ReceiveEventHndler OnReciveData;
-
-        public delegate void DisconnectedEventHndler(object sender, EventArgs e);
-        public event DisconnectedEventHndler OnDisconnected;
-
-        public delegate void ConnectedEventHndler(EventArgs e);
-        public event ConnectedEventHndler OnConnected;
-
-        public bool IsClosed
-        {
-            get { return mySocket == null; }
-        }
-
-        public virtual void Dispose()
-        {
-            Close();
-        }
-
-
+        // 受信データイベント
+        public event Action<object,EventArgs> Connected;
+        public event Action<object, EventArgs> Disconnected;
+        public event Action<object, TcpClientModel> DataReceived;
+        
         public TcpClient()
         {
-            mySocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        }
-        public TcpClient(Socket sc)
-        {
-            mySocket = sc;
-
+               
         }
 
-        private void Close()
-        {
-            Debug.WriteLine("Close" + " ThreadID:" + Thread.CurrentThread.ManagedThreadId);
-            if (mySocket != null)
-            {
-                mySocket.Shutdown(SocketShutdown.Both);
-                mySocket.Close();
-                mySocket = null;
-            }
-
-            if (myMs != null)
-            {
-                myMs.Dispose();
-                myMs.Close();
-                myMs = null;
-            }
-
-            OnDisconnected(this, new EventArgs());
-
-        }
-        public void Connect(string host, int port)
-        {
-            IPEndPoint ipEnd = new IPEndPoint(Dns.GetHostAddresses(host)[1], port);
-
-            //mySocket.Connect(ipEnd);
-
-            mySocket.BeginConnect(ipEnd, new AsyncCallback(ConnectCallback), mySocket);
-
-
-        }
-
-        private void ConnectCallback(IAsyncResult ar)
-        {
-            Debug.WriteLine("Connecte" + "ThreadID" + Thread.CurrentThread.ManagedThreadId);
-            try
-            {
-                Socket client = (Socket)ar.AsyncState;
-                client.EndConnect(ar);
-                Console.WriteLine("Socket connected to {0}", client.RemoteEndPoint.ToString());
-
-                OnConnected(new EventArgs());
-
-                // 受信タスク開始
-                StartRecive();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-
-        }
-
-        private void StartRecive()
-        {
-            Debug.WriteLine("Connecte" + "ThreadID" + Thread.CurrentThread.ManagedThreadId);
-            byte[] rcvBuff = new byte[1024];
-
-            myMs = new MemoryStream();
-
-            mySocket.BeginReceive(rcvBuff, 0, rcvBuff.Length, SocketFlags.None,
-                                  new AsyncCallback(ReciveDataCallback), rcvBuff);
-
-        }
-
-        private void ReciveDataCallback(IAsyncResult ar)
-        {
-            try
-            {
-                Debug.WriteLine("Connecte" + "ThreadID" + Thread.CurrentThread.ManagedThreadId);
-
-                int len = -1;
-                bool aa = IsClosed;
-
-                if (IsClosed)
-                {
-                    return;
-                }
-                len = mySocket.EndReceive(ar);
-
-                //切断された
-                if (len <= 0)
-                {
-                    Close();
-                    return;
-                }
-
-                byte[] rcvBuff = (byte[])ar.AsyncState;
-                myMs.Write(rcvBuff, 0, len);
-
-
-                if (myMs.Length >= 2)
-                {
-                    string rcvStr = enc.GetString(myMs.ToArray());
-                    var message = Encoding.UTF8.GetString(rcvBuff, 0, len);
-                    TcpClientModel Tcpdata =
-                            JsonConvert.DeserializeObject<TcpClientModel>(rcvStr);
-
-                    //dynamic objectJson = DynamicJson.Parse(rcvStr);
-                    //Console.WriteLine(objectJson);
-                    //string pass = objectJson["passphrase"];
-                    //double time = objectJson["bar"]["open"];
-                    //double size = objectJson["strategy"]["postion_size"];
-
-                    OnReciveData(this, Tcpdata);
-                }
-                myMs.Close();
-                myMs = new MemoryStream();
-                if (!IsClosed)
-                {
-                    mySocket.BeginReceive(rcvBuff, 0, rcvBuff.Length, SocketFlags.None,
-                                  new AsyncCallback(ReciveDataCallback), rcvBuff);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                var exceptonBase = ex as ExceptionBase;
-                if (exceptonBase == null)
-                {
-                    Console.WriteLine("Massege" + ex.Message);
-                    Close();
-                }
-            }
-            finally
-            {
-            }
-        }
         /// <summary>
-        /// メッセージを送信する
+        /// TcpClient スタート
         /// </summary>
-        /// <param name="str"></param>
-        public void Send(string str)
+        /// <param name="host"></param>
+        /// <param name="port"></param>
+        /// <returns></returns>
+        public async Task StartClient(string host, int port)
         {
-            Debug.WriteLine("Send" + " ThreadID:" + Thread.CurrentThread.ManagedThreadId);
-
-            if (!IsClosed)
+            _host = host;
+            _port = port;
+            
+            while (true)
             {
-                //文字列をBYTE配列に変換
-                byte[] sendBytes = enc.GetBytes(str + "\r\n");
-                lock (syncLock)
+                try
                 {
-                    //送信
-                    mySocket.Send(sendBytes);
+                    //コネクトできたない
+                    //_logger.Info(" Not connected ");
+                    //Disconnected?.Invoke(this, new EventArgs());
+                    
+                    //リモートホストに接続する
+                    _logger.Info("リモートホストに接続します。");
+                    
+                    client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                    client =  await ConnectAsync(host, port,3000);
+                    
+                    _logger.Info("connect 正常");
+
+                    //イベントで正常接続出来た事を通知する
+                    
+                    Connected?.Invoke(this,new EventArgs());
+
+                    // ソケット情報を保持する為のオブジェクトを生成
+                    state = new StateObject();
+                    state.workSocket = client;
+                    response = string.Empty;
+
+
+                    while (client.Connected)
+                    {
+                        // ソケット情報を保持する為のオブジェクトを生成
+                        state = new StateObject();
+                        state.workSocket = client;
+                        response = string.Empty;
+
+                        int received = await client.ReceiveAsync(new ArraySegment<byte>(state.buffer), SocketFlags.None);
+                        if (received == 0)
+                        {
+                            //Console.WriteLine("Connection closed by remote host.");
+                            Disconnected?.Invoke(this, new EventArgs());
+                            _logger.Error("TcpClient受信エラー");
+                            break;
+                        }
+                        response = Encoding.UTF8.GetString(state.buffer, 0, received);
+                        TcpClientModel Tcpdata =
+                            JsonConvert.DeserializeObject<TcpClientModel>(response);
+                        
+                        DataReceived?.Invoke(this,Tcpdata);
+
+                        _logger.Info("Receive Data Send to ViewModel");
+
+                        //Console.WriteLine($"Received: {response}");
+                                 
+                    }    
+                }
+                catch (SocketException ex)
+                {
+                    //Console.WriteLine($"Error receiving data from server: {ex.Message}");
+                    await Task.Delay(2000);
+                    Disconnected?.Invoke(this, new EventArgs());
+                    _logger.Info(" TcpClint Disconnected ");
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Exception: {ex.Message}");
                 }
             }
+        }
+
+        /// <summary>
+        /// リモートホストに接続する
+        /// </summary>
+        /// <param name="host"></param>
+        /// <param name="port"></param>
+        /// <param name="timeoutMs"></param>
+        /// <returns></returns>
+        public async Task<Socket> ConnectAsync(string host, int port, int timeoutMs)
+        {
+            while (true)
+            {
+                try
+                {
+                    // TCP/IPのソケットを作成
+                    client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                    await client.ConnectAsync(host,port);
+
+                    //リモートホストに接続完了
+                    return client;
+                }
+                catch (SocketException ex)
+                {
+                    await Task.Delay(timeoutMs);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 非同期処理でソケット情報を保持する為のオブジェクト
+        /// </summary>
+        public class StateObject
+        {
+            // 受信バッファサイズ
+            public const int BufferSize = 1024;
+
+            // 受信バッファ
+            public byte[] buffer = new byte[BufferSize];
+
+            // 受信データ
+            public StringBuilder sb = new StringBuilder();
+
+            // ソケット
+            public Socket workSocket = null;
+        }
+
+        /// <summary>
+        /// 受信終了メソッド
+        /// </summary>
+        public void Disconnect()
+        {
+            if (client.Connected)
+            {
+                client.Shutdown(SocketShutdown.Both);
+            }
+            client.Close();
+            Disconnected?.Invoke(this, EventArgs.Empty);
         }
     }
 }
+

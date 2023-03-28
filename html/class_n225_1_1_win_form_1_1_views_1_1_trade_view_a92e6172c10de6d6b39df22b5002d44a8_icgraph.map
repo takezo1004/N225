@@ -1,0 +1,5 @@
+<map id="N225.WinForm.Views.TradeView.LongOrderButton_Click" name="N225.WinForm.Views.TradeView.LongOrderButton_Click">
+<area shape="rect" id="node1" title="新規買い注文発注ボタンイベント" alt="" coords="469,5,657,45"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#abef6fe442b1cc6058c790bff7529917d" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="237,5,421,45"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#a6c534b18de8d8b1bc8e5e86d5d50b5a6" title="コンストラクタ" alt="" coords="5,5,189,45"/>
+</map>

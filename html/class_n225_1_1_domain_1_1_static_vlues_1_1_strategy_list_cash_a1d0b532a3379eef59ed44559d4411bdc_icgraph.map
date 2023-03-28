@@ -1,0 +1,13 @@
+<map id="N225.Domain.StaticVlues.StrategyListCash.GetCheck" name="N225.Domain.StaticVlues.StrategyListCash.GetCheck">
+<area shape="rect" id="node1" title="checkデータ取得" alt="" coords="1068,85,1252,125"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_modules_1_1_strategy_maneger.html#af1285ffd04ba74bbbb2e56f66a9928f0" title="checkの取得" alt="" coords="805,13,1020,53"/>
+<area shape="rect" id="node6" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a5aca98f3b7dc6d511faa6e7c8126341a" title=" " alt="" coords="810,77,1015,132"/>
+<area shape="rect" id="node9" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#af85b695538a65d08981930477b6b2890" title="StrategyGrid CheckBox check set" alt="" coords="821,156,1005,211"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#a936bbdebf750fb8f26fd56c5a867b86c" title="自動注文発注" alt="" coords="539,13,757,53"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#adaf1090f509f6fad34fd302c9ede530b" title="自動注文受信データイベント(TcpClient Recive Data Event)" alt="" coords="272,5,491,60"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#a141e855807272afeb0cf3e12caa6dbde" title="コンストラクター" alt="" coords="5,13,224,53"/>
+<area shape="rect" id="node7" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#ae8c79e9698b5b93dc8516791968ff5d4" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="539,85,757,125"/>
+<area shape="rect" id="node8" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a9915feaa678a623339ebe48a0b908e0e" title=" " alt="" coords="281,85,482,125"/>
+<area shape="rect" id="node10" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#abef6fe442b1cc6058c790bff7529917d" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="556,163,740,203"/>
+<area shape="rect" id="node11" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#a6c534b18de8d8b1bc8e5e86d5d50b5a6" title="コンストラクタ" alt="" coords="289,163,473,203"/>
+</map>

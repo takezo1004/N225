@@ -1,0 +1,8 @@
+<map id="N225.WinForm.BackgrondWorkers.InquiryTimer.InquiryTimer" name="N225.WinForm.BackgrondWorkers.InquiryTimer.InquiryTimer">
+<area shape="rect" id="node1" title="BackGrand Timer設定" alt="" coords="5,37,233,77"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a9c9bea5c3257dee04d8bf63bd22c2b0c" title="BackGrand　照会処理" alt="" coords="281,37,509,77"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html#acc048b8ae1093512f68d190ac2048c3f" title="ディクショナリー取得" alt="" coords="584,5,759,45"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_win_form_1_1_backgrond_workers_1_1_inquiry_timer.html#a92ab2a49f241c26a26c66b647968ed2d" title="オーダー照会" alt="" coords="557,69,785,109"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_orders___future.html#a9dda3b4219e0dca1b0820e102405d57a" title=" " alt="" coords="833,25,1027,65"/>
+<area shape="rect" id="node6" href="$class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c" title="from JsonSring to DynamicJson" alt="" coords="833,113,1027,153"/>
+</map>

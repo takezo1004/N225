@@ -1,0 +1,14 @@
+<map id="N225.Infrastrucure.KubuAPIs.Sendorder_Future_Exit.SendOrderExit" name="N225.Infrastrucure.KubuAPIs.Sendorder_Future_Exit.SendOrderExit">
+<area shape="rect" id="node1" title=" " alt="" coords="1540,137,1784,177"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_future.html#a8c14f02357274eaf3819f2d7273d0234" title="注文発注と戻り値(entity)作成" alt="" coords="1304,137,1492,177"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#a1ce43ab2cbf1f203844f090f6a6edda4" title="注文発注送信" alt="" coords="1037,137,1256,177"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#a865533084dd42ccc768771c9ea0635e4" title="/注文データフィールド作成" alt="" coords="771,101,989,141"/>
+<area shape="rect" id="node10" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#a936bbdebf750fb8f26fd56c5a867b86c" title="自動注文発注" alt="" coords="771,169,989,209"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#a72ca5a91d03cd9e7ffb64a5d5428267c" title="返済発注ボタンイベント" alt="" coords="521,5,705,45"/>
+<area shape="rect" id="node8" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#a92e6172c10de6d6b39df22b5002d44a8" title="新規買い注文発注ボタンイベント" alt="" coords="519,69,707,109"/>
+<area shape="rect" id="node9" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#a87b5d91cdc4ade182eab6ce3b5c5c48d" title="新規売り注文発注ボタンイベント" alt="" coords="516,133,711,173"/>
+<area shape="rect" id="node6" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#abef6fe442b1cc6058c790bff7529917d" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="255,69,439,109"/>
+<area shape="rect" id="node7" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#a6c534b18de8d8b1bc8e5e86d5d50b5a6" title="コンストラクタ" alt="" coords="5,69,189,109"/>
+<area shape="rect" id="node11" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#adaf1090f509f6fad34fd302c9ede530b" title="自動注文受信データイベント(TcpClient Recive Data Event)" alt="" coords="504,198,723,253"/>
+<area shape="rect" id="node12" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#a141e855807272afeb0cf3e12caa6dbde" title="コンストラクター" alt="" coords="237,205,456,245"/>
+</map>

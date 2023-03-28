@@ -1,0 +1,8 @@
+<map id="N225.Domain.Exceptions.ExceptionBase" name="N225.Domain.Exceptions.ExceptionBase">
+<area shape="rect" id="node1" title="例外規定クラス" alt="" coords="133,109,395,134"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception.html" title=" " alt="" coords="443,5,701,45"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_domain_1_1_exceptions_1_1_data_not_exists_exception.html" title="データなし例外" alt="" coords="472,69,672,109"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_domain_1_1_exceptions_1_1_fake_exception.html" title="Fake例外" alt="" coords="471,133,673,173"/>
+<area shape="rect" id="node6" href="$class_n225_1_1_domain_1_1_exceptions_1_1_kabu_exception.html" title=" " alt="" coords="471,197,673,237"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,85,134"/>
+</map>

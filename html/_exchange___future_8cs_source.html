@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N225Project: C:/Users/takao2/N225(C#)/src/N225/N225.Infrastrucure/KubuAPIs/Exchange_Future.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">N225Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9dfeeea711b64c78137f56323d7c17f7.html">N225</a></li><li class="navelem"><a class="el" href="dir_e80ea87dc10ff581e9f905b2ed0a8fbb.html">N225.Infrastrucure</a></li><li class="navelem"><a class="el" href="dir_c10d5d8fbd56cdf8602e34f96205aac4.html">KubuAPIs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Exchange_Future.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_exchange___future_8cs.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain.html">N225.Domain</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Newtonsoft.Json;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Net.Http;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is.html">N225.Infrastrucure.KubuAPIs</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_exchange___future.html">    8</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_exchange___future.html">Exchange_Future</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_exchange___future.html#a2c087a6acf1d427758a2e94cde37c1e7">   10</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_exchange___future.html#a2c087a6acf1d427758a2e94cde37c1e7">Main</a>(<span class="keywordtype">string</span>[] args)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            var url = <span class="stringliteral">&quot;http://localhost:18080/kabusapi/exchange/usdjpy&quot;</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordtype">string</span> token = <a class="code hl_class" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_generate_token.html">GenerateToken</a>.<a class="code hl_function" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_generate_token.html#a8405055f245f5a402619c7cc71edc890">GetToken</a>(<a class="code hl_class" href="class_n225_1_1_domain_1_1_shared.html">Shared</a>.<a class="code hl_property" href="class_n225_1_1_domain_1_1_shared.html#aced5c92062e1d96651aae75ed86fc06d">APIPassword</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                var client = <span class="keyword">new</span> HttpClient();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                var request = <span class="keyword">new</span> HttpRequestMessage(HttpMethod.Get, url);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                request.Headers.Add(<span class="stringliteral">&quot;X-API-KEY&quot;</span>, token);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                HttpResponseMessage response = client.SendAsync(request).Result;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                Console.WriteLine(<span class="stringliteral">&quot;{0} \n {1}&quot;</span>, JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result), response.Headers);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                Console.ReadKey();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">catch</span> (HttpRequestException e)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                Console.WriteLine(<span class="stringliteral">&quot;{0} {1}&quot;</span>, e, e.Message);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                Console.ReadKey();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                Console.WriteLine(<span class="stringliteral">&quot;{0} {1}&quot;</span>, ex, ex.Message);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                Console.ReadKey();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            Console.ReadKey();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_shared_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_shared.html">N225.Domain.Shared</a></div><div class="ttdef"><b>Definition:</b> <a href="_shared_8cs_source.html#l00005">Shared.cs:6</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_shared_html_aced5c92062e1d96651aae75ed86fc06d"><div class="ttname"><a href="class_n225_1_1_domain_1_1_shared.html#aced5c92062e1d96651aae75ed86fc06d">N225.Domain.Shared.APIPassword</a></div><div class="ttdeci">static string APIPassword</div><div class="ttdef"><b>Definition:</b> <a href="_shared_8cs_source.html#l00011">Shared.cs:11</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_exchange___future_html"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_exchange___future.html">N225.Infrastrucure.KubuAPIs.Exchange_Future</a></div><div class="ttdef"><b>Definition:</b> <a href="_exchange___future_8cs_source.html#l00008">Exchange_Future.cs:9</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_exchange___future_html_a2c087a6acf1d427758a2e94cde37c1e7"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_exchange___future.html#a2c087a6acf1d427758a2e94cde37c1e7">N225.Infrastrucure.KubuAPIs.Exchange_Future.Main</a></div><div class="ttdeci">static void Main(string[] args)</div><div class="ttdef"><b>Definition:</b> <a href="_exchange___future_8cs_source.html#l00010">Exchange_Future.cs:10</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_generate_token_html"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_generate_token.html">N225.Infrastrucure.KubuAPIs.GenerateToken</a></div><div class="ttdef"><b>Definition:</b> <a href="_generate_token_8cs_source.html#l00015">GenerateToken.cs:16</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_generate_token_html_a8405055f245f5a402619c7cc71edc890"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_generate_token.html#a8405055f245f5a402619c7cc71edc890">N225.Infrastrucure.KubuAPIs.GenerateToken.GetToken</a></div><div class="ttdeci">static string GetToken(string apiPassword)</div><div class="ttdef"><b>Definition:</b> <a href="_generate_token_8cs_source.html#l00018">GenerateToken.cs:18</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_html"><div class="ttname"><a href="namespace_n225_1_1_domain.html">N225.Domain</a></div><div class="ttdef"><b>Definition:</b> <a href="_best_market_oder_8cs_source.html#l00006">BestMarketOder.cs:7</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is_html"><div class="ttname"><a href="namespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is.html">N225.Infrastrucure.KubuAPIs</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_soft_limit_8cs_source.html#l00006">APISoftLimit.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

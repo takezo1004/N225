@@ -1,0 +1,5 @@
+<map id="N225.WinForm.BackgrondWorkers.InquiryTimer.Oorder" name="N225.WinForm.BackgrondWorkers.InquiryTimer.Oorder">
+<area shape="rect" id="node1" title="オーダー照会" alt="" coords="5,49,233,89"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_orders___future.html#a9dda3b4219e0dca1b0820e102405d57a" title=" " alt="" coords="281,5,475,45"/>
+<area shape="rect" id="node3" href="$class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c" title="from JsonSring to DynamicJson" alt="" coords="281,93,475,133"/>
+</map>

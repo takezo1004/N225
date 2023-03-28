@@ -117,7 +117,7 @@ namespace N225.Domain.StaticVlues
         /// </summary>
         /// <param name="fileld"></param>
         /// <exception cref="KabuException"></exception>
-        public static void UpDate(InputOrder fileld)
+        public static bool UpDate(InputOrder fileld)
         {
             string key = fileld.Strategy + Convert.ToString(fileld.Interval);
             
@@ -131,8 +131,11 @@ namespace N225.Domain.StaticVlues
             }
             else
             {
-                throw new KabuException("StrategyListCash 該当するstrategyはありません");
+                Console.Write("StrategyListCash 該当するstrategyはありません");
+                return false; 
+                
             }
+            return true;
         }
 
         /// <summary>

@@ -1,0 +1,8 @@
+<map id="N225.Domain.CustomRibbon.settingUpdate" name="N225.Domain.CustomRibbon.settingUpdate">
+<area shape="rect" id="node1" title=" " alt="" coords="272,133,504,173"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_domain_1_1_custom_ribbon.html#adcf2ce1c15fcd0d6c004afad98ff3d35" title="buttonコントロール押下時" alt="" coords="18,5,211,45"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_domain_1_1_custom_ribbon.html#ae95b8a9e5491ab45c96a3a40aadb3fe7" title="DropDownのクリック処理" alt="" coords="5,69,224,109"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_domain_1_1_custom_ribbon.html#a119924b0324712968d3377ebc685665d" title="editBoxの変更(onChange)。onChangeはフォーカスアウト、または[enter]キー押下時に発生" alt="" coords="18,133,211,173"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_domain_1_1_custom_ribbon.html#adb245718b8e0cf0ef51aba2c2686a386" title="リボンのロード処理" alt="" coords="18,197,211,237"/>
+<area shape="rect" id="node6" href="$class_n225_1_1_domain_1_1_custom_ribbon.html#a3950f4ab7d2fd27539dc4f88e7dd9cae" title="togguleButton押下" alt="" coords="18,261,211,301"/>
+</map>

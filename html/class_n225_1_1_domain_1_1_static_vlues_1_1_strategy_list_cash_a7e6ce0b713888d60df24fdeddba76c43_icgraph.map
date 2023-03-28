@@ -1,0 +1,13 @@
+<map id="N225.Domain.StaticVlues.StrategyListCash.IsList" name="N225.Domain.StaticVlues.StrategyListCash.IsList">
+<area shape="rect" id="node1" title="ディクショナリーのコピーを取得" alt="" coords="1057,143,1232,183"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_modules_1_1_strategy_maneger.html#a334a1c49da64781cce6958b6006ba341" title="formにStrategyを表示する" alt="" coords="795,77,1009,117"/>
+<area shape="rect" id="node6" href="$class_n225_1_1_win_form_1_1_strategys_1_1_strategy_model.html#ade144006f80badf1ecd9b2efabf42026" title="StrategyDataGridに表示" alt="" coords="255,143,477,183"/>
+<area shape="rect" id="node8" href="$class_n225_1_1_win_form_1_1_modules_1_1_strategy_maneger.html#ab1b123fda9d9564c3790334bec781bfe" title="キャッシュデータをCSVファイルに保存する。" alt="" coords="795,208,1009,248"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#a5b8c4db4b82dc39005d05117c35dd3cd" title="アプリケーションの初期化" alt="" coords="527,5,745,45"/>
+<area shape="rect" id="node5" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#ae3ff3e24ddacdc85f3a62c2b0d101b30" title="初期設定画面表示する" alt="" coords="525,70,747,125"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#a6c534b18de8d8b1bc8e5e86d5d50b5a6" title="コンストラクタ" alt="" coords="274,5,458,45"/>
+<area shape="rect" id="node7" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a9915feaa678a623339ebe48a0b908e0e" title=" " alt="" coords="5,175,207,215"/>
+<area shape="rect" id="node9" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#a89a821b3ae42a0f950825325e06e86c1" title=" " alt="" coords="535,201,737,255"/>
+<area shape="rect" id="node11" href="$class_n225_1_1_win_form_1_1_views_1_1_trade_view.html#a802205457b3a9813b7279994b9610524" title="Form Close イベント CSVファイルを保存" alt="" coords="539,280,733,320"/>
+<area shape="rect" id="node10" href="$class_n225_1_1_win_form_1_1_strategy_views_1_1_strategy_form.html#ae8c79e9698b5b93dc8516791968ff5d4" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="257,207,475,247"/>
+</map>

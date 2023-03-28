@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N225Project: C:/Users/takao2/N225(C#)/src/N225/N225.Infrastrucure/KubuAPIs/Sendorder_Future_new.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">N225Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9dfeeea711b64c78137f56323d7c17f7.html">N225</a></li><li class="navelem"><a class="el" href="dir_e80ea87dc10ff581e9f905b2ed0a8fbb.html">N225.Infrastrucure</a></li><li class="navelem"><a class="el" href="dir_c10d5d8fbd56cdf8602e34f96205aac4.html">KubuAPIs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Sendorder_Future_new.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_sendorder___future__new_8cs.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_codeplex_1_1_data.html">Codeplex.Data</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_repositories.html">N225.Domain.Repositories</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Newtonsoft.Json;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>System.Net.Http;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>System.Text;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is.html">N225.Infrastrucure.KubuAPIs</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_sendorder___future__new.html">   11</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_sendorder___future__new.html">Sendorder_Future_new</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_sendorder___future__new.html#aea4128587487477a7d08bbdea01fa10c">   13</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_sendorder___future__new.html#aea4128587487477a7d08bbdea01fa10c">SendOrder</a>(<span class="keywordtype">string</span> apiKey, <a class="code hl_class" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html">SendOrderEntity</a> entity)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            var obj = <span class="keyword">new</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                Password = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#aa5c0c34b0d911ed7a68afb06a791ca82">Pssword</a>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                Symbol = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a04f6ce45bb6755b617214f5cbf5e96bc">Symbol</a>,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                Exchange = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#ac1278534fe2c81e720d5711b77c265bc">Exchange</a>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                TradeType = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a90a33a2a31e3265ff8b103f387fd62e0">TradeType</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                TimeInForce = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a9cb19f7e1ae2dd4c4ec55d8fdce4f911">TimeInForce</a>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                <a class="code hl_typedef" href="_trade_view_model_8cs.html#a3f1ca2cbd60a0920ffd16e9be8661acf">Side</a> = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a71c96f01068ca3652c7acac00ae527bd">Side</a>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                Qty = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#ad233609e6898401d5e8be54be5454766">Qty</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                FrontOrderType = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a91272395e1fffd8505d8dbb6412a9df4">FrontOrderType</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                Price = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#ac5767cec006376a354a12d09688c5f39">Price</a>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                ExpireDay = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a28ff22948d3ca4d11912f814f52a70f9">ExpireDay</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                ReverseLimitOrder = <span class="keyword">new</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    TriggerPrice = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a1b172cd4ed921e5865a8c4403a955870">TriggerPrice</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                    UnderOver = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a207a74502e8957a01a25213488d4f2b9">UnderOver</a>,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                    AfterHitOrderType = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#aa788c060dfbb84219c0922a7d63a5d1d">AfterHitOrderType</a>,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                    AfterHitPrice = entity.AfterHitPrice</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            };</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            var url = <span class="stringliteral">&quot;http://localhost:18080/kabusapi/sendorder/future&quot;</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordtype">string</span> OrderId;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordtype">double</span> result;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            var XAPIkey = apiKey;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                var client = <span class="keyword">new</span> HttpClient();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                var request = <span class="keyword">new</span> HttpRequestMessage(HttpMethod.Post, url);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                request.Headers.Add(<span class="stringliteral">&quot;ContentType&quot;</span>, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                request.Headers.Add(<span class="stringliteral">&quot;X-API-KEY&quot;</span>, XAPIkey);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                request.Content = <span class="keyword">new</span> StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                HttpResponseMessage response = client.SendAsync(request).Result;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="keywordtype">string</span> content = response.Content.ReadAsStringAsync().Result;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                var objectJson = <a class="code hl_class" href="class_codeplex_1_1_data_1_1_dynamic_json.html">DynamicJson</a>.<a class="code hl_function" href="class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c">Parse</a>(content);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <span class="keywordflow">if</span> (objectJson.IsDefined(<span class="stringliteral">&quot;Code&quot;</span>))</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    <span class="comment">// API Error</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    <span class="keywordtype">string</span> error = <span class="stringliteral">&quot;Eoor Code:&quot;</span> + objectJson[<span class="stringliteral">&quot;Code&quot;</span>] + <span class="stringliteral">&quot; &quot;</span> + objectJson[<span class="stringliteral">&quot;Message&quot;</span>];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception.html">APIResponsesException</a>(error);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                result = objectJson.Result;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                OrderId = objectJson.OrderId;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">catch</span> (HttpRequestException e)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                Console.WriteLine(<span class="stringliteral">&quot;{0} {1}&quot;</span>, e, e.Message);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">throw</span> e;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">return</span> OrderId;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="ttc" id="a_trade_view_model_8cs_html_a3f1ca2cbd60a0920ffd16e9be8661acf"><div class="ttname"><a href="_trade_view_model_8cs.html#a3f1ca2cbd60a0920ffd16e9be8661acf">Side</a></div><div class="ttdeci">N225.Domain.CommonConst.Side Side</div><div class="ttdef"><b>Definition:</b> <a href="_trade_view_model_8cs_source.html#l00024">TradeViewModel.cs:24</a></div></div>
+<div class="ttc" id="aclass_codeplex_1_1_data_1_1_dynamic_json_html"><div class="ttname"><a href="class_codeplex_1_1_data_1_1_dynamic_json.html">Codeplex.Data.DynamicJson</a></div><div class="ttdef"><b>Definition:</b> <a href="_dynamic_json_8cs_source.html#l00025">DynamicJson.cs:26</a></div></div>
+<div class="ttc" id="aclass_codeplex_1_1_data_1_1_dynamic_json_html_a9cfff1dd980141c6d965c9ce3541628c"><div class="ttname"><a href="class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c">Codeplex.Data.DynamicJson.Parse</a></div><div class="ttdeci">static dynamic Parse(string json)</div><div class="ttdoc">from JsonSring to DynamicJson</div><div class="ttdef"><b>Definition:</b> <a href="_dynamic_json_8cs_source.html#l00035">DynamicJson.cs:35</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_exceptions_1_1_a_p_i_responses_exception.html">N225.Domain.Exceptions.APIResponsesException</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_responses_exception_8cs_source.html#l00003">APIResponsesException.cs:4</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html">N225.Domain.Repositories.SendOrderEntity</a></div><div class="ttdoc">注文API用新規・返済注文データフィールド</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00006">SendOrderEntity.cs:7</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_a04f6ce45bb6755b617214f5cbf5e96bc"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a04f6ce45bb6755b617214f5cbf5e96bc">N225.Domain.Repositories.SendOrderEntity.Symbol</a></div><div class="ttdeci">string Symbol</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00051">SendOrderEntity.cs:51</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_a1b172cd4ed921e5865a8c4403a955870"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a1b172cd4ed921e5865a8c4403a955870">N225.Domain.Repositories.SendOrderEntity.TriggerPrice</a></div><div class="ttdeci">double TriggerPrice</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00060">SendOrderEntity.cs:60</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_a207a74502e8957a01a25213488d4f2b9"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a207a74502e8957a01a25213488d4f2b9">N225.Domain.Repositories.SendOrderEntity.UnderOver</a></div><div class="ttdeci">int UnderOver</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00061">SendOrderEntity.cs:61</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_a28ff22948d3ca4d11912f814f52a70f9"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a28ff22948d3ca4d11912f814f52a70f9">N225.Domain.Repositories.SendOrderEntity.ExpireDay</a></div><div class="ttdeci">int ExpireDay</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00059">SendOrderEntity.cs:59</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_a71c96f01068ca3652c7acac00ae527bd"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a71c96f01068ca3652c7acac00ae527bd">N225.Domain.Repositories.SendOrderEntity.Side</a></div><div class="ttdeci">string Side</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00055">SendOrderEntity.cs:55</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_a90a33a2a31e3265ff8b103f387fd62e0"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a90a33a2a31e3265ff8b103f387fd62e0">N225.Domain.Repositories.SendOrderEntity.TradeType</a></div><div class="ttdeci">int TradeType</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00053">SendOrderEntity.cs:53</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_a91272395e1fffd8505d8dbb6412a9df4"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a91272395e1fffd8505d8dbb6412a9df4">N225.Domain.Repositories.SendOrderEntity.FrontOrderType</a></div><div class="ttdeci">int FrontOrderType</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00057">SendOrderEntity.cs:57</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_a9cb19f7e1ae2dd4c4ec55d8fdce4f911"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#a9cb19f7e1ae2dd4c4ec55d8fdce4f911">N225.Domain.Repositories.SendOrderEntity.TimeInForce</a></div><div class="ttdeci">int TimeInForce</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00054">SendOrderEntity.cs:54</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_aa5c0c34b0d911ed7a68afb06a791ca82"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#aa5c0c34b0d911ed7a68afb06a791ca82">N225.Domain.Repositories.SendOrderEntity.Pssword</a></div><div class="ttdeci">string Pssword</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00050">SendOrderEntity.cs:50</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_aa788c060dfbb84219c0922a7d63a5d1d"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#aa788c060dfbb84219c0922a7d63a5d1d">N225.Domain.Repositories.SendOrderEntity.AfterHitOrderType</a></div><div class="ttdeci">int AfterHitOrderType</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00062">SendOrderEntity.cs:62</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_ac1278534fe2c81e720d5711b77c265bc"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#ac1278534fe2c81e720d5711b77c265bc">N225.Domain.Repositories.SendOrderEntity.Exchange</a></div><div class="ttdeci">int Exchange</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00052">SendOrderEntity.cs:52</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_ac5767cec006376a354a12d09688c5f39"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#ac5767cec006376a354a12d09688c5f39">N225.Domain.Repositories.SendOrderEntity.Price</a></div><div class="ttdeci">double Price</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00058">SendOrderEntity.cs:58</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_repositories_1_1_send_order_entity_html_ad233609e6898401d5e8be54be5454766"><div class="ttname"><a href="class_n225_1_1_domain_1_1_repositories_1_1_send_order_entity.html#ad233609e6898401d5e8be54be5454766">N225.Domain.Repositories.SendOrderEntity.Qty</a></div><div class="ttdeci">double Qty</div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00056">SendOrderEntity.cs:56</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_sendorder___future__new_html"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_sendorder___future__new.html">N225.Infrastrucure.KubuAPIs.Sendorder_Future_new</a></div><div class="ttdef"><b>Definition:</b> <a href="_sendorder___future__new_8cs_source.html#l00011">Sendorder_Future_new.cs:12</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_sendorder___future__new_html_aea4128587487477a7d08bbdea01fa10c"><div class="ttname"><a href="class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_sendorder___future__new.html#aea4128587487477a7d08bbdea01fa10c">N225.Infrastrucure.KubuAPIs.Sendorder_Future_new.SendOrder</a></div><div class="ttdeci">static string SendOrder(string apiKey, SendOrderEntity entity)</div><div class="ttdef"><b>Definition:</b> <a href="_sendorder___future__new_8cs_source.html#l00013">Sendorder_Future_new.cs:13</a></div></div>
+<div class="ttc" id="anamespace_codeplex_1_1_data_html"><div class="ttname"><a href="namespace_codeplex_1_1_data.html">Codeplex.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_dynamic_json_8cs_source.html#l00023">DynamicJson.cs:24</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_exceptions_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_responses_exception_8cs_source.html#l00001">APIResponsesException.cs:2</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_repositories_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_repositories.html">N225.Domain.Repositories</a></div><div class="ttdef"><b>Definition:</b> <a href="_send_order_entity_8cs_source.html#l00001">SendOrderEntity.cs:2</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is_html"><div class="ttname"><a href="namespace_n225_1_1_infrastrucure_1_1_kubu_a_p_is.html">N225.Infrastrucure.KubuAPIs</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_soft_limit_8cs_source.html#l00006">APISoftLimit.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N225Project: C:/Users/takao2/N225(C#)/src/N225/N225.WinForm/TradeViewModels/ListViewBase.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">N225Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9dfeeea711b64c78137f56323d7c17f7.html">N225</a></li><li class="navelem"><a class="el" href="dir_8bfd8ca50f4834cd5fa98f3c85d17c82.html">N225.WinForm</a></li><li class="navelem"><a class="el" href="dir_3219a96443be8dfcc13aeb0edac97a62.html">TradeViewModels</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ListViewBase.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_list_view_base_8cs.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.ComponentModel;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Runtime.CompilerServices;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_n225_1_1_win_form_1_1_trade_view_models.html">N225.WinForm.TradeViewModels</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html">ListViewBase</a> : INotifyPropertyChanged</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html#ad0cba9b78cb25b2daafcf44356c70dda">    9</a></span>        <span class="keyword">public</span> <span class="keyword">event</span> PropertyChangedEventHandler <a class="code hl_event" href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html#ad0cba9b78cb25b2daafcf44356c70dda">PropertyChanged</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html#a2749c7f12154d84869ca82a35edcbbf3">   11</a></span>        <span class="keyword">protected</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html#a2749c7f12154d84869ca82a35edcbbf3">SetPropety&lt;T&gt;</a>(ref T field,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                    T value, [CallerMemberName] <span class="keywordtype">string</span> propetyName = <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                <span class="keywordflow">if</span> (Equals(field, value))</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                field = value;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                var h = this.<a class="code hl_event" href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html#ad0cba9b78cb25b2daafcf44356c70dda">PropertyChanged</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <span class="keywordflow">if</span> (h != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                    h(<span class="keyword">this</span>, <span class="keyword">new</span> PropertyChangedEventArgs(propetyName));</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                Console.WriteLine(ex.ToString());</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base_html"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html">N225.WinForm.TradeViewModels.ListViewBase</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_view_base_8cs_source.html#l00007">ListViewBase.cs:8</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base_html_a2749c7f12154d84869ca82a35edcbbf3"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html#a2749c7f12154d84869ca82a35edcbbf3">N225.WinForm.TradeViewModels.ListViewBase.SetPropety&lt; T &gt;</a></div><div class="ttdeci">bool SetPropety&lt; T &gt;(ref T field, T value, [CallerMemberName] string propetyName=null)</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_base_8cs_source.html#l00011">ListViewBase.cs:11</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base_html_ad0cba9b78cb25b2daafcf44356c70dda"><div class="ttname"><a href="class_n225_1_1_win_form_1_1_trade_view_models_1_1_list_view_base.html#ad0cba9b78cb25b2daafcf44356c70dda">N225.WinForm.TradeViewModels.ListViewBase.PropertyChanged</a></div><div class="ttdeci">PropertyChangedEventHandler PropertyChanged</div><div class="ttdef"><b>Definition:</b> <a href="_list_view_base_8cs_source.html#l00009">ListViewBase.cs:9</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_win_form_1_1_trade_view_models_html"><div class="ttname"><a href="namespace_n225_1_1_win_form_1_1_trade_view_models.html">N225.WinForm.TradeViewModels</a></div><div class="ttdef"><b>Definition:</b> <a href="_create_send_order_new_8cs_source.html#l00006">CreateSendOrderNew.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

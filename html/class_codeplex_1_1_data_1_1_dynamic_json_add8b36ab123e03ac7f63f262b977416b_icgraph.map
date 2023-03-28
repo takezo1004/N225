@@ -1,0 +1,5 @@
+<map id="Codeplex.Data.DynamicJson.CreateJsonString" name="Codeplex.Data.DynamicJson.CreateJsonString">
+<area shape="rect" id="node1" title=" " alt="" coords="247,37,440,77"/>
+<area shape="rect" id="node2" href="$class_codeplex_1_1_data_1_1_dynamic_json.html#acfda5bd0559c3544c3be1f3744950b2f" title="create JsonSring from primitive or IEnumerable or Object({public property name:property value})" alt="" coords="5,5,199,45"/>
+<area shape="rect" id="node3" href="$class_codeplex_1_1_data_1_1_dynamic_json.html#a2e1636a0c6876aef5cd3161af3ca889f" title="Serialize to JsonString" alt="" coords="5,69,199,109"/>
+</map>

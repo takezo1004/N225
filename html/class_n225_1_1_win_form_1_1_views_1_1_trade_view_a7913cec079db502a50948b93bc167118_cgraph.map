@@ -1,0 +1,9 @@
+<map id="N225.WinForm.Views.TradeView.CancelOrderButton_Click" name="N225.WinForm.Views.TradeView.CancelOrderButton_Click">
+<area shape="rect" id="node1" title="取消発注ボタンイベント" alt="" coords="5,93,205,133"/>
+<area shape="rect" id="node2" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#aff72e77a84b5fd1a6a034c79df23dde9" title="注文中のオーダーキャンセル" alt="" coords="253,93,472,133"/>
+<area shape="rect" id="node3" href="$class_n225_1_1_infrastrucure_1_1_kabu_suit_1_1_send_order_cancel.html#a5e086ae6ec6e1781bc4f90a4a982916a" title="注文取消し処理" alt="" coords="529,61,729,101"/>
+<area shape="rect" id="node7" href="$class_n225_1_1_win_form_1_1_trade_view_models_1_1_trade_view_model.html#aee785b54066d276cea2a875237be6737" title="メッセージ" alt="" coords="520,125,739,165"/>
+<area shape="rect" id="node4" href="$class_n225_1_1_infrastrucure_1_1_kubu_a_p_is_1_1_cancel_order___future.html#a8dd67ab0ba296650c7e50389c330dd95" title=" " alt="" coords="787,29,1001,69"/>
+<area shape="rect" id="node6" href="$class_n225_1_1_domain_1_1_static_vlues_1_1_order_inquiry_list.html#ad9fa1370cc5b01b58c07b79e8a893520" title="ReciveType取得" alt="" coords="807,93,981,133"/>
+<area shape="rect" id="node5" href="$class_codeplex_1_1_data_1_1_dynamic_json.html#a9cfff1dd980141c6d965c9ce3541628c" title="from JsonSring to DynamicJson" alt="" coords="1049,29,1243,69"/>
+</map>

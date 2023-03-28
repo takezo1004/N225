@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>N225Project: C:/Users/takao2/N225(C#)/src/N225/N225.Domain/StaticVlues/PositionsCache.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">N225Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9dfeeea711b64c78137f56323d7c17f7.html">N225</a></li><li class="navelem"><a class="el" href="dir_11fc7df218b23d68e0ea8183b5718885.html">N225.Domain</a></li><li class="navelem"><a class="el" href="dir_4fa75ec3b0272f13a42bff2ab6e8a88c.html">StaticVlues</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">PositionsCache.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_positions_cache_8cs.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_common_const.html">N225.Domain.CommonConst</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_entities.html">N225.Domain.Entities</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.Linq;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_n225_1_1_domain_1_1_static_vlues.html">N225.Domain.StaticVlues</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html">    9</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code hl_class" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html">PositionsCache</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">   14</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> Dictionary&lt;string, PositionListEntity&gt; <a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a> =</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                                    <span class="keyword">new</span> Dictionary&lt;string, PositionListEntity&gt;();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a0f1192ff8cfaf60e480c4420a10189d7">   21</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a0f1192ff8cfaf60e480c4420a10189d7">Add</a>(<a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html">PositionListEntity</a> entity)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a>[entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html#aed7cf95b1d9f3c3ca8269a93e556173e">ExecutionID</a>] = entity;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a3502a495b15ed89bc37fa44201f95f5e">   33</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a3502a495b15ed89bc37fa44201f95f5e">GetSide</a>(<span class="keywordtype">string</span> executionID)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html">PositionListEntity</a> tpl;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a>.TryGetValue(executionID, out tpl))</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <span class="keywordflow">return</span> tpl.<a class="code hl_property" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html#a3bdfd877d31710c87de2022ad4463905">Side</a>.Value;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_exceptions_1_1_data_not_exists_exception.html">DataNotExistsException</a>(<span class="stringliteral">&quot;ExecutionIDはありません&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a5c8d36d6d53eebb461b448ee3e6734d4">   54</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a5c8d36d6d53eebb461b448ee3e6734d4">GetLeaveQty</a>(<span class="keywordtype">string</span> executionID)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html">PositionListEntity</a> tpl;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a>.TryGetValue(executionID, out tpl))</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordflow">return</span> tpl.<a class="code hl_property" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html#af695c6fc2114f0df353578846149f4bd">LeaveQty</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_exceptions_1_1_data_not_exists_exception.html">DataNotExistsException</a>(<span class="stringliteral">&quot;返済枚数はありません&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a2bbe982a16cb14c3b2b1e19557d84bd7">   74</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a2bbe982a16cb14c3b2b1e19557d84bd7">Remove</a>(<span class="keywordtype">string</span> executionID)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html">PositionListEntity</a> tpl;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a>.TryGetValue(executionID, out tpl))</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a>.Remove(executionID);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_exceptions_1_1_data_not_exists_exception.html">DataNotExistsException</a>(<span class="stringliteral">&quot;ExecutionIDはありません&quot;</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a9ecdb54e6a805d0d8490a5217e32762c">   93</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a9ecdb54e6a805d0d8490a5217e32762c">UpDate</a>(<a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_position_manager_entity.html">PositionManagerEntity</a> entity)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordtype">string</span> executionID = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_entities_1_1_position_manager_entity.html#a52675f4a3d5bf00a2bac5f183700d0ec">ExecutionID</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html">PositionListEntity</a> tpl;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a>.TryGetValue(executionID, out tpl))</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                tpl.LeaveQty = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_entities_1_1_position_manager_entity.html#a5369d1dca85b0c6e1a92e10f6972db9b">CumQty</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                tpl.HoldQty = entity.<a class="code hl_property" href="class_n225_1_1_domain_1_1_entities_1_1_position_manager_entity.html#a4b45b4064262e71d94e6babd6f1df770">OrderQty</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_exceptions_1_1_data_not_exists_exception.html">DataNotExistsException</a>(<span class="stringliteral">&quot;ExecutionIDはありません&quot;</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a490def6a4d423355f47d381b6a5df409">  112</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a490def6a4d423355f47d381b6a5df409">IsExecutionId</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html">PositionListEntity</a> tpl;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a>.TryGetValue(<span class="keywordtype">id</span>, out tpl);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a2a63a3f451c9b23b0059ff803453791f">  124</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a2a63a3f451c9b23b0059ff803453791f">AddHoldQty</a>(<span class="keywordtype">string</span> executionID, <span class="keywordtype">double</span> qty)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <a class="code hl_class" href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html">PositionListEntity</a> tpl;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a>.TryGetValue(executionID, out tpl))</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                tpl.HoldQty = qty;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_n225_1_1_domain_1_1_exceptions_1_1_data_not_exists_exception.html">DataNotExistsException</a>(<span class="stringliteral">&quot;ExecutionIDはありません&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a05d4e01234c95bd0cd4a68514d0b96fc">  145</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> List&lt;string&gt; <a class="code hl_function" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a05d4e01234c95bd0cd4a68514d0b96fc">GetExecutionId</a>(<span class="keywordtype">string</span> strtegy, <span class="keywordtype">int</span> interval, <span class="keywordtype">string</span> side)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="keywordtype">string</span> <span class="keywordtype">id</span> = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="keywordtype">string</span> _side = side;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            List&lt;PositionListEntity&gt; Items = <span class="keyword">new</span> List&lt;PositionListEntity&gt;();</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="comment">//strtegy ,intervalと同じものの新しいディクショナリーを作成する。</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            var NewDic = <a class="code hl_variable" href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">_positionsCache</a>.Where(x =&gt; x.Value.TradeMode.Value == 1 &amp;&amp; x.Value.Strategy == strtegy &amp;&amp; x.Value.Iterval ==</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                          interval &amp;&amp; x.Value.Side.Value == _side).ToDictionary(<span class="keyword">auto</span> =&gt; <span class="keyword">auto</span>.Key, <span class="keyword">auto</span> =&gt; <span class="keyword">auto</span>.Value.OrderID);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">return</span> NewDic.Keys.ToList();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_position_list_entity_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html">N225.Domain.Entities.PositionListEntity</a></div><div class="ttdoc">約定データ用フィールド</div><div class="ttdef"><b>Definition:</b> <a href="_position_list_entity_8cs_source.html#l00008">PositionListEntity.cs:9</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_position_list_entity_html_a3bdfd877d31710c87de2022ad4463905"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html#a3bdfd877d31710c87de2022ad4463905">N225.Domain.Entities.PositionListEntity.Side</a></div><div class="ttdeci">ValueObjects.Side Side</div><div class="ttdef"><b>Definition:</b> <a href="_position_list_entity_8cs_source.html#l00044">PositionListEntity.cs:44</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_position_list_entity_html_aed7cf95b1d9f3c3ca8269a93e556173e"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html#aed7cf95b1d9f3c3ca8269a93e556173e">N225.Domain.Entities.PositionListEntity.ExecutionID</a></div><div class="ttdeci">string ExecutionID</div><div class="ttdef"><b>Definition:</b> <a href="_position_list_entity_8cs_source.html#l00049">PositionListEntity.cs:49</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_position_list_entity_html_af695c6fc2114f0df353578846149f4bd"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_position_list_entity.html#af695c6fc2114f0df353578846149f4bd">N225.Domain.Entities.PositionListEntity.LeaveQty</a></div><div class="ttdeci">double LeaveQty</div><div class="ttdef"><b>Definition:</b> <a href="_position_list_entity_8cs_source.html#l00045">PositionListEntity.cs:45</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_position_manager_entity_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_position_manager_entity.html">N225.Domain.Entities.PositionManagerEntity</a></div><div class="ttdef"><b>Definition:</b> <a href="_position_manager_entity_8cs_source.html#l00003">PositionManagerEntity.cs:4</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_position_manager_entity_html_a4b45b4064262e71d94e6babd6f1df770"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_position_manager_entity.html#a4b45b4064262e71d94e6babd6f1df770">N225.Domain.Entities.PositionManagerEntity.OrderQty</a></div><div class="ttdeci">double OrderQty</div><div class="ttdef"><b>Definition:</b> <a href="_position_manager_entity_8cs_source.html#l00009">PositionManagerEntity.cs:9</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_position_manager_entity_html_a52675f4a3d5bf00a2bac5f183700d0ec"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_position_manager_entity.html#a52675f4a3d5bf00a2bac5f183700d0ec">N225.Domain.Entities.PositionManagerEntity.ExecutionID</a></div><div class="ttdeci">string ExecutionID</div><div class="ttdef"><b>Definition:</b> <a href="_position_manager_entity_8cs_source.html#l00007">PositionManagerEntity.cs:7</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_entities_1_1_position_manager_entity_html_a5369d1dca85b0c6e1a92e10f6972db9b"><div class="ttname"><a href="class_n225_1_1_domain_1_1_entities_1_1_position_manager_entity.html#a5369d1dca85b0c6e1a92e10f6972db9b">N225.Domain.Entities.PositionManagerEntity.CumQty</a></div><div class="ttdeci">double CumQty</div><div class="ttdef"><b>Definition:</b> <a href="_position_manager_entity_8cs_source.html#l00010">PositionManagerEntity.cs:10</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_exceptions_1_1_data_not_exists_exception_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_exceptions_1_1_data_not_exists_exception.html">N225.Domain.Exceptions.DataNotExistsException</a></div><div class="ttdoc">データなし例外</div><div class="ttdef"><b>Definition:</b> <a href="_data_not_exists_exception_8cs_source.html#l00007">DataNotExistsException.cs:8</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html">N225.Domain.StaticVlues.PositionsCache</a></div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00009">PositionsCache.cs:10</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html_a05d4e01234c95bd0cd4a68514d0b96fc"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a05d4e01234c95bd0cd4a68514d0b96fc">N225.Domain.StaticVlues.PositionsCache.GetExecutionId</a></div><div class="ttdeci">static List&lt; string &gt; GetExecutionId(string strtegy, int interval, string side)</div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00145">PositionsCache.cs:145</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html_a0f1192ff8cfaf60e480c4420a10189d7"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a0f1192ff8cfaf60e480c4420a10189d7">N225.Domain.StaticVlues.PositionsCache.Add</a></div><div class="ttdeci">static void Add(PositionListEntity entity)</div><div class="ttdoc">追加</div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00021">PositionsCache.cs:21</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html_a2a63a3f451c9b23b0059ff803453791f"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a2a63a3f451c9b23b0059ff803453791f">N225.Domain.StaticVlues.PositionsCache.AddHoldQty</a></div><div class="ttdeci">static void AddHoldQty(string executionID, double qty)</div><div class="ttdoc">約定枚数変更</div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00124">PositionsCache.cs:124</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html_a2bbe982a16cb14c3b2b1e19557d84bd7"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a2bbe982a16cb14c3b2b1e19557d84bd7">N225.Domain.StaticVlues.PositionsCache.Remove</a></div><div class="ttdeci">static void Remove(string executionID)</div><div class="ttdoc">要素削除</div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00074">PositionsCache.cs:74</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html_a3502a495b15ed89bc37fa44201f95f5e"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a3502a495b15ed89bc37fa44201f95f5e">N225.Domain.StaticVlues.PositionsCache.GetSide</a></div><div class="ttdeci">static string GetSide(string executionID)</div><div class="ttdoc">売買区分取得</div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00033">PositionsCache.cs:33</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html_a41ece2fc12922415750a5f03b7a70cfa"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a41ece2fc12922415750a5f03b7a70cfa">N225.Domain.StaticVlues.PositionsCache._positionsCache</a></div><div class="ttdeci">static Dictionary&lt; string, PositionListEntity &gt; _positionsCache</div><div class="ttdoc">ディクショナリー　PositionList</div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00014">PositionsCache.cs:14</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html_a490def6a4d423355f47d381b6a5df409"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a490def6a4d423355f47d381b6a5df409">N225.Domain.StaticVlues.PositionsCache.IsExecutionId</a></div><div class="ttdeci">static bool IsExecutionId(string id)</div><div class="ttdoc">ExecutionIdの有無</div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00112">PositionsCache.cs:112</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html_a5c8d36d6d53eebb461b448ee3e6734d4"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a5c8d36d6d53eebb461b448ee3e6734d4">N225.Domain.StaticVlues.PositionsCache.GetLeaveQty</a></div><div class="ttdeci">static double GetLeaveQty(string executionID)</div><div class="ttdoc">保有枚数</div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00054">PositionsCache.cs:54</a></div></div>
+<div class="ttc" id="aclass_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache_html_a9ecdb54e6a805d0d8490a5217e32762c"><div class="ttname"><a href="class_n225_1_1_domain_1_1_static_vlues_1_1_positions_cache.html#a9ecdb54e6a805d0d8490a5217e32762c">N225.Domain.StaticVlues.PositionsCache.UpDate</a></div><div class="ttdeci">static void UpDate(PositionManagerEntity entity)</div><div class="ttdoc">更新</div><div class="ttdef"><b>Definition:</b> <a href="_positions_cache_8cs_source.html#l00093">PositionsCache.cs:93</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_common_const_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_common_const.html">N225.Domain.CommonConst</a></div><div class="ttdef"><b>Definition:</b> <a href="_front_order_type_8cs_source.html#l00001">FrontOrderType.cs:2</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_entities_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_entities.html">N225.Domain.Entities</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_order_8cs_source.html#l00001">InputOrder.cs:2</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_exceptions_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_exceptions.html">N225.Domain.Exceptions</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_responses_exception_8cs_source.html#l00001">APIResponsesException.cs:2</a></div></div>
+<div class="ttc" id="anamespace_n225_1_1_domain_1_1_static_vlues_html"><div class="ttname"><a href="namespace_n225_1_1_domain_1_1_static_vlues.html">N225.Domain.StaticVlues</a></div><div class="ttdef"><b>Definition:</b> <a href="_order_inquiry_list_8cs_source.html#l00006">OrderInquiryList.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

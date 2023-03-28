@@ -10,6 +10,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Threading;
+using log4net;
 
 namespace N225.WinForm.Views
 {
@@ -41,6 +42,7 @@ namespace N225.WinForm.Views
         /// </summary>
         public TradeView()
         {
+            
             try
             {
                 viewModel = new TradeViewModel();
@@ -174,7 +176,7 @@ namespace N225.WinForm.Views
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.StackTrace);
+                //Console.WriteLine(e.StackTrace);
                 MessageBoxIcon icon = MessageBoxIcon.Error;
                 string caption = "エラー";
                 var exceptonBase = e as ExceptionBase;
@@ -401,6 +403,13 @@ namespace N225.WinForm.Views
         /// <param name="e"></param>
         private void ExitOrderButton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(executionID ))
+            {
+                string message = "返済するポジションを選択してください。";
+                MessageBox.Show(message);
+                return;
+            }
+
             try
             {
                 string side = PositionsCache.GetSide(executionID);
@@ -826,8 +835,8 @@ namespace N225.WinForm.Views
         private void TimeInForceCombBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             viewModel.SelectedTimeInForce2 = Convert.ToInt32(TimeInForceCombBox2.SelectedValue);
-            Console.WriteLine("index{0} name {1} selectValue {2}", TimeInForceCombBox2.SelectedIndex,
-                TimeInForceCombBox2.Text, TimeInForceCombBox2.SelectedValue);
+            //Console.WriteLine("index{0} name {1} selectValue {2}", TimeInForceCombBox2.SelectedIndex,
+            //    TimeInForceCombBox2.Text, TimeInForceCombBox2.SelectedValue);
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
