@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{058676E6-66F7-4788-8F91-7B360D1A45C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>N225.Domain</RootNamespace>
+    <AssemblyName>N225.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BestMarketOder.cs" />
+    <Compile Include="CommonConst\Side.cs" />
+    <Compile Include="DynamicJson.cs" />
+    <Compile Include="Entities\InputOrder.cs" />
+    <Compile Include="Entities\OnoderEntity.cs" />
+    <Compile Include="Entities\OrderEntity.cs" />
+    <Compile Include="Entities\OrderListEntity.cs" />
+    <Compile Include="Entities\OrederManagerEntity.cs" />
+    <Compile Include="Entities\PositionCsvItem.cs" />
+    <Compile Include="Entities\PositionManagerEntity.cs" />
+    <Compile Include="Entities\StrategyViewEntity.cs" />
+    <Compile Include="Entities\SymbolNameResultEntity.cs" />
+    <Compile Include="Entities\TimeInForceEntity.cs" />
+    <Compile Include="Entities\WebSocketEntity.cs" />
+    <Compile Include="Exceptions\KabuException.cs" />
+    <Compile Include="KabuElements\Board.cs" />
+    <Compile Include="KabuElements\CancelOrder.cs" />
+    <Compile Include="KabuElements\InformationParam.cs" />
+    <Compile Include="KabuElements\OrderResult.cs" />
+    <Compile Include="KabuElements\PositionsResult.cs" />
+    <Compile Include="KabuElements\Ranking.cs" />
+    <Compile Include="KabuElements\Register.cs" />
+    <Compile Include="KabuElements\SymbolResult.cs" />
+    <Compile Include="KabuElements\SymbolNameRessult.cs" />
+    <Compile Include="KabuElements\TcpClientModel.cs" />
+    <Compile Include="KabuElements\Token.cs" />
+    <Compile Include="KabuElements\Wallet.cs" />
+    <Compile Include="Entities\PositionListEntity.cs" />
+    <Compile Include="Exceptions\APIResponsesException.cs" />
+    <Compile Include="Exceptions\DataNotExistsException.cs" />
+    <Compile Include="Exceptions\ExceptionBase.cs" />
+    <Compile Include="Exceptions\FakeException.cs" />
+    <Compile Include="LimitOrder.cs" />
+    <Compile Include="MarketOrder.cs" />
+    <Compile Include="Modules\Auth.cs" />
+    <Compile Include="Modules\Utils\ConstValues.cs" />
+    <Compile Include="Modules\Utils\DirectoryUtils.cs" />
+    <Compile Include="Modules\Utils\Validator.cs" />
+    <Compile Include="OrderFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ICommand.cs" />
+    <Compile Include="Repositories\IOrder.cs" />
+    <Compile Include="Entities\SendOrderEntity.cs" />
+    <Compile Include="StaticVlues\OrderInquiryList.cs" />
+    <Compile Include="StaticVlues\OrdersCache.cs" />
+    <Compile Include="StaticVlues\PositionsCache.cs" />
+    <Compile Include="StaticVlues\Shared.cs" />
+    <Compile Include="CommonConst\FrontOrderType.cs" />
+    <Compile Include="CommonConst\TradeType.cs" />
+    <Compile Include="StaticVlues\StrategyListCash.cs" />
+    <Compile Include="StopOrder.cs" />
+    <Compile Include="ValueObjects\CashMargin.cs" />
+    <Compile Include="ValueObjects\Exchange.cs" />
+    <Compile Include="ValueObjects\ReciveType.cs" />
+    <Compile Include="ValueObjects\RecvTime.cs" />
+    <Compile Include="ValueObjects\Side.cs" />
+    <Compile Include="CommonConst\TimeInForce.cs" />
+    <Compile Include="ValueObjects\TradeMode.cs" />
+    <Compile Include="ValueObjects\ValueObject.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
